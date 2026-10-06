@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aduamankwahkwasi292-wq.github.io/lunar-app/sitemap.xml
