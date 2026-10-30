@@ -3,26 +3,36 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Page not found — Lunar</title>
+<title>Page not found — MrSOLIS</title>
 <meta name="robots" content="noindex">
-<link rel="icon" href="/lunar-app/assets/img/icon.png" type="image/png">
+<meta name="theme-color" content="#000000">
+<!-- self-contained: GitHub Pages serves this for any missing path, so nothing here is a relative link -->
 <style>
-  :root{color-scheme:dark}
-  html,body{height:100%;margin:0}
-  body{display:grid;place-items:center;background:#06070c;color:#eef1f8;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;text-align:center;padding:24px;
-    background-image:radial-gradient(60% 45% at 78% -8%,rgba(42,88,255,.18),transparent 70%)}
-  img{width:56px;height:56px;border-radius:14px;margin:0 auto 22px}
-  h1{font-size:clamp(2rem,6vw,3.2rem);margin:0 0 10px;letter-spacing:-.03em}
-  p{margin:0 0 26px;color:rgba(238,241,248,.66)}
-  a{display:inline-block;padding:13px 24px;border-radius:12px;background:#eef1f8;color:#07090f;font-weight:600;text-decoration:none}
+  @font-face { font-family: "Inter Tight"; font-weight: 300 800; font-display: swap;
+    src: url(https://aduamankwahkwasi292-wq.github.io/lunar-app/assets/fonts/inter-tight-var.woff2) format("woff2"); }
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px; background: #000; color: #f1f1f2;
+    font-family: "Inter Tight", "Segoe UI", system-ui, -apple-system, sans-serif; text-align: center;
+    background-image: radial-gradient(1px 1px at 12% 22%, #fff8, transparent), radial-gradient(1px 1px at 78% 14%, #fff6, transparent),
+      radial-gradient(1px 1px at 64% 72%, #fff7, transparent), radial-gradient(1px 1px at 28% 84%, #fff5, transparent),
+      radial-gradient(1.5px 1.5px at 88% 58%, #fff9, transparent), radial-gradient(1px 1px at 42% 46%, #fff4, transparent); }
+  svg { width: 64px; height: 52px; margin: 0 auto 26px; display: block; }
+  h1 { margin: 0; font-size: clamp(36px, 7vw, 58px); letter-spacing: -0.03em; line-height: 1.05;
+    background: linear-gradient(180deg, #fff 0%, #d4d6da 52%, #8b8f95 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  p { margin: 16px auto 30px; max-width: 440px; color: #9a9ca2; font-size: 17px; line-height: 1.6; }
+  a { display: inline-flex; align-items: center; height: 50px; padding: 0 26px; border-radius: 999px; background: #fff; color: #000;
+    text-decoration: none; font-weight: 650; font-size: 16px; }
+  a:hover { background: #e7e8ea; box-shadow: 0 0 22px rgba(255, 255, 255, 0.28); }
+  a:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
 </style>
 </head>
 <body>
-  <main>
-    <img src="/lunar-app/assets/img/icon.png" alt="" width="56" height="56">
-    <h1>Lost in space.</h1>
-    <p>That page doesn't exist, but Lunar's home page does.</p>
-    <a href="/lunar-app/">Back to Lunar</a>
-  </main>
+<main>
+  <svg viewBox="0 0 44 36" aria-hidden="true"><defs><linearGradient id="m" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".55" stop-color="#bfc2c6"/><stop offset="1" stop-color="#7c8086"/></linearGradient></defs><path d="M4 32V6l14 14L32 6v26" fill="none" stroke="url(#m)" stroke-width="5"/><circle cx="39" cy="29.5" r="3" fill="#fff"/></svg>
+  <h1>Lost in space.</h1>
+  <p>That page isn't here. Everything about MrSOLIS 3 is on the home page.</p>
+  <a href="https://aduamankwahkwasi292-wq.github.io/lunar-app/">Back to MrSOLIS</a>
+</main>
 </body>
 </html>

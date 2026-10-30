@@ -3,354 +3,522 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lunar — Your private AI study tutor</title>
-<meta name="description" content="Lunar is a free, fully offline AI study tutor for Windows. Upload your slides and it teaches them to you slide by slide. No account, no API keys, no internet.">
-<meta name="theme-color" content="#06070c">
+<title>MrSOLIS 3 — Your study tutor, on your own computer</title>
+<meta name="description" content="MrSOLIS 3 teaches your lecture slides slide by slide, answers your questions, marks your quizzes and works maths out exactly. It runs on your Windows laptop, works offline, and costs US$1, once.">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/icon-512.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/icon-512.png">
 <link rel="canonical" href="https://aduamankwahkwasi292-wq.github.io/lunar-app/">
-<link rel="icon" href="assets/img/icon.png" type="image/png">
-<link rel="apple-touch-icon" href="assets/img/icon.png">
-
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Lunar">
-<meta property="og:title" content="Lunar — Your private AI study tutor">
-<meta property="og:description" content="Upload your slides and Lunar teaches them to you, slide by slide. 100% offline, free, for Windows.">
+<meta property="og:site_name" content="MrSOLIS">
 <meta property="og:url" content="https://aduamankwahkwasi292-wq.github.io/lunar-app/">
+<meta property="og:title" content="MrSOLIS 3 — Your study tutor, on your own computer">
+<meta property="og:description" content="Lessons from your own slides, quizzes it marks, maths worked out exactly. Offline, private, US$1 once.">
 <meta property="og:image" content="https://aduamankwahkwasi292-wq.github.io/lunar-app/assets/img/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Lunar — Your private AI study tutor">
-<meta name="twitter:description" content="Upload your slides and Lunar teaches them to you. 100% offline, free, for Windows.">
-<meta name="twitter:image" content="https://aduamankwahkwasi292-wq.github.io/lunar-app/assets/img/og.jpg">
-
 <link rel="preload" href="assets/fonts/inter-tight-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
 <script>document.documentElement.classList.remove('no-js')</script>
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "Lunar",
+  "name": "MrSOLIS 3",
   "applicationCategory": "EducationalApplication",
   "operatingSystem": "Windows 10, Windows 11",
-  "description": "A free, fully offline AI study tutor. Upload your slides and Lunar teaches them to you slide by slide.",
-  "softwareVersion": "1.0.0",
-  "downloadUrl": "https://github.com/aduamankwahkwasi292-wq/lunar-app/releases/latest",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-  "author": [{ "@type": "Person", "name": "Kwasi Kwakye" }, { "@type": "Person", "name": "Alex Nyanteng" }]
+  "description": "An offline AI study tutor: lessons from your own slides, quizzes it marks, and maths worked out exactly.",
+  "offers": { "@type": "Offer", "price": "1.00", "priceCurrency": "USD" },
+  "publisher": { "@type": "Organization", "name": "Behemoth Group" }
 }
 </script>
 </head>
-
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <canvas id="stars" aria-hidden="true"></canvas>
 
 <header class="nav" id="nav">
   <div class="wrap nav-in">
-    <a class="brand" href="#top" aria-label="Lunar, back to top"><img src="assets/img/icon.png" alt="" width="30" height="30">Lunar</a>
-    <nav class="nav-links" aria-label="Primary">
+    <a class="brand" href="#top" aria-label="MrSOLIS 3, back to top">
+      <svg viewBox="0 0 44 36" aria-hidden="true"><defs><linearGradient id="lm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".55" stop-color="#bfc2c6"/><stop offset="1" stop-color="#7c8086"/></linearGradient></defs><path d="M4 32V6l14 14L32 6v26" fill="none" stroke="url(#lm)" stroke-width="5"/><circle cx="39" cy="29.5" r="3" fill="#fff"/></svg>
+      MrSOLIS <span>3</span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
       <a href="#features">Features</a>
-      <a href="#privacy">Privacy</a>
+      <a href="#tour">App tour</a>
+      <a href="#watch">Watch</a>
+      <a href="#price">Price</a>
+      <a href="#install">Install</a>
       <a href="#faq">FAQ</a>
-      <a class="btn btn-primary btn-sm" href="#download">Download</a>
+      <a class="btn btn-primary btn-sm" href="#price">Get MrSOLIS</a>
     </nav>
   </div>
 </header>
 
 <main id="main">
-
-  <!-- ===================== HERO ===================== -->
+  <!-- ═══ hero ═══ -->
   <section class="hero" id="top">
     <div class="wrap">
-      <a class="pill" href="#download"><i></i>Lunar 1.0 is out for Windows</a>
-      <h1>Your private AI<br><span class="serif grad-text">study tutor.</span></h1>
-      <p class="sub">Upload your lecture slides and Lunar teaches them to you, one slide at a time, on a classroom board. It runs entirely on your computer: no account, no API keys, no internet.</p>
-
+      <a class="pill" href="#price"><b>NEW</b>MrSOLIS 3 for Windows · US$1, once</a>
+      <h1>Your study tutor,<br><span class="metal">on your own computer.</span></h1>
+      <p class="lead">Drop in your lecture slides and MrSOLIS teaches them to you, one slide at a time. Ask it anything, snap a
+        question from your notebook, take quizzes it marks for you, and practise maths with every answer worked out exactly.
+        It runs on your laptop, works offline, and costs US$1 — once.</p>
       <div class="cta-row">
-        <a class="btn btn-primary btn-lg" href="https://github.com/aduamankwahkwasi292-wq/lunar-app/releases/download/v1.0.0/Lunar-Setup-1.0.0.exe" data-dl>
-          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.6 10.5 4.5v7H3zM11.6 4.35 21 3v8.5h-9.4zM3 12.5h7.5v7L3 18.4zM11.6 12.5H21V21l-9.4-1.4z"/></svg>
+        <a class="btn btn-primary btn-lg" href="https://github.com/aduamankwahkwasi292-wq/lunar/releases/latest" data-dl>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.6 10.5 4.5v7H3zM11.6 4.35 21 3v8.5h-9.4zM3 12.5h7.5v7L3 18.4zM11.6 12.5H21V21l-9.4-1.4z"/></svg>
           Download for Windows
         </a>
-        <a class="btn btn-ghost btn-lg" href="#demo">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z"/></svg>
-          Watch it teach
+        <a class="btn btn-lg" href="#watch">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z"/></svg>
+          Watch it work
         </a>
       </div>
-      <p class="cta-note">
-        <span>Free</span>
-        <span class="dot-sep">Windows 10 &amp; 11</span>
-        <span class="dot-sep"><span data-size>1.4 GB</span> download</span>
-        <span class="dot-sep"><a href="#install">Install notes</a></span>
-      </p>
-    </div>
-
-    <div class="stage" id="demo">
-      <div class="frame">
-        <video id="v-hero" muted playsinline loop preload="none" poster="assets/img/hero-poster.webp" width="1600" height="1000"
-               aria-label="Screen recording of Lunar: a PDF is uploaded, the slide opens on the classroom board and Lunar teaches it, then a region of the slide is boxed and explained.">
-          <source src="assets/video/hero.mp4" type="video/mp4">
-        </video>
-        <button class="vbtn" type="button" data-toggle aria-label="Pause video"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg><span>Pause</span></button>
+      <p class="cta-note">Windows 10 or 11 · <b>US$1 (GHS 12)</b>, paid once · Updates are free · macOS and Linux coming soon</p>
+      <div class="hero-shot reveal">
+        <div class="frame"><img src="assets/img/shot-diagram.webp" width="1600" height="850" alt="MrSOLIS teaching Ohm's law: the slide with its circuit diagram on the silver board, and the lesson written underneath" fetchpriority="high"></div>
       </div>
-      <p class="caption" id="hero-caption">Recorded in Lunar with a sample physics deck. Waiting time is sped up.</p>
+      <div class="strip reveal">
+        <div><b>Works offline</b><span>After a one-time setup, no internet needed to study.</span></div>
+        <div><b>Private</b><span>Your slides and questions never leave your computer.</span></div>
+        <div><b>Pay once</b><span>US$1. Every update after that is free.</span></div>
+        <div><b>Any course</b><span>Lessons from your own material, at your level.</span></div>
+      </div>
     </div>
   </section>
 
-  <!-- ===================== FEATURES ===================== -->
-  <section class="section" id="features">
+  <!-- ═══ features ═══ -->
+  <section id="features">
     <div class="wrap">
       <div class="sec-head reveal">
-        <p class="eyebrow">What it does</p>
-        <h2>Not a chatbot.<br>A class that's <span class="serif grad-text">just for you.</span></h2>
-        <p class="lead">Lunar turns the slides you already have into a lesson you can interrupt, question and move through at your own pace.</p>
+        <div class="eyebrow">What it does</div>
+        <h2>Everything you need to study, in one window.</h2>
+        <p>MrSOLIS is a tutor, a quiz master and a maths engine that lives on your laptop. Here's how it helps.</p>
       </div>
 
-      <div class="features">
+      <div class="feature reveal">
+        <div class="feature-text">
+          <span class="badge">Lessons</span>
+          <h3>It teaches your slides — the way a good tutor would.</h3>
+          <p>Drop a PDF, PowerPoint, Word file or a photo of your notes on the board. Each slide appears on a silver board, and
+            MrSOLIS explains it underneath in plain words, at the length you choose.</p>
+          <ul class="ticks">
+            <li>Looks at the diagrams, charts and pictures on your slides</li>
+            <li>Short, standard or detailed lessons</li>
+            <li>Your place is saved in every deck</li>
+          </ul>
+        </div>
+        <div class="frame zoom" tabindex="0" role="button" data-full="assets/img/shot-cell.webp" data-caption="A biology lesson: the slide's cell diagram above, MrSOLIS's explanation below."><img src="assets/img/shot-cell.webp" width="1600" height="850" loading="lazy" alt="MrSOLIS explaining a slide about the parts of an animal cell"></div>
+      </div>
 
-        <article class="feature reveal">
-          <div class="copy">
-            <span class="num">01</span>
-            <h3>Bring any lecture file.</h3>
-            <p>Drop in a PDF, a PowerPoint, a Word document, a spreadsheet, or even photos of slides. Lunar reads every page, with built-in OCR for scanned and image-only slides.</p>
-            <div class="pills" aria-label="Supported formats">
-              <span class="chip">PDF</span><span class="chip">PPTX</span><span class="chip">DOCX</span><span class="chip">XLSX</span><span class="chip">CSV</span><span class="chip">TXT</span><span class="chip">Images (OCR)</span>
-            </div>
-          </div>
-          <div class="media">
-            <div class="frame"><img src="assets/img/shot-upload.webp" width="1600" height="1000" loading="lazy" decoding="async" alt="Lunar's upload screen: a drop zone for PDF, DOCX, TXT, PPTX, XLSX, CSV and image files, with a green 'On-device AI ready' status."></div>
-          </div>
-        </article>
+      <div class="feature flip reveal">
+        <div class="feature-text">
+          <span class="badge">Ask &amp; solve</span>
+          <h3>Ask anything. Highlight anything.</h3>
+          <p>Type a question about the slide you're on, or highlight any part of a slide or lesson and press <b>Explain</b> for a
+            closer look or <b>Solve</b> for a worked answer.</p>
+          <ul class="ticks">
+            <li>Answers about your own material, not the whole internet</li>
+            <li>Worked solutions, step by step</li>
+            <li>“Practise more like this” turns a problem into practice</li>
+          </ul>
+        </div>
+        <div class="shots-2">
+          <div class="frame zoom" tabindex="0" role="button" data-full="assets/img/shot-ask.webp" data-caption="Asking a question about the slide you're on."><img src="assets/img/shot-ask.webp" width="1600" height="850" loading="lazy" alt="A student's question about Ohm's law and MrSOLIS's answer"></div>
+        </div>
+      </div>
 
-        <article class="feature flip reveal">
-          <div class="copy">
-            <span class="num">02</span>
-            <h3>A classroom, not a chatbot.</h3>
-            <p>Your real slide opens on the hologram board and Lunar teaches it like a patient professor, drawing on your own material rather than the open internet.</p>
-            <ul class="ticks">
-              <li>Your actual slides, diagrams and formulas included</li>
-              <li>Previous and Next, a progress bar for long decks</li>
-              <li>Hit Stop the moment you've heard enough</li>
-            </ul>
-          </div>
-          <div class="media">
-            <div class="frame"><img src="assets/img/shot-classroom.webp" width="1600" height="1000" loading="lazy" decoding="async" alt="The Lunar classroom: a slide about Newton's first law on a glowing hologram board above a lunar landscape, with Lunar's explanation streaming below it."></div>
-          </div>
-        </article>
+      <div class="feature reveal">
+        <div class="feature-text">
+          <span class="badge">Pictures &amp; videos</span>
+          <h3>Stuck on a question in your notebook? Snap it.</h3>
+          <p>Take a picture of a question — from your notebook, a handout or a past paper — or paste a screenshot, and ask.
+            MrSOLIS reads it and walks you through it.</p>
+          <ul class="ticks">
+            <li>Photos, screenshots and handwriting</li>
+            <li>Lecture videos and recordings: it listens to what's said and looks at what's shown</li>
+          </ul>
+        </div>
+        <div class="frame zoom" tabindex="0" role="button" data-full="assets/img/shot-picture.webp" data-caption="A photo of a homework question from a notebook, read and answered part by part."><img src="assets/img/shot-picture.webp" width="1600" height="850" loading="lazy" alt="A notebook photo of a physics question about Ohm's law, and MrSOLIS's answer"></div>
+      </div>
 
-        <article class="feature reveal">
-          <div class="copy">
-            <span class="num">03</span>
-            <h3>Box it. Explain it. Solve it.</h3>
-            <p>Drag a box around anything on a slide: a definition, a label, a practice question. Lunar reads exactly what you selected, then explains it in plain language or works it through step by step.</p>
-            <ul class="ticks">
-              <li>Select text on the slide or in Lunar's own lesson</li>
-              <li>Explain for a closer look, Solve for questions</li>
-            </ul>
-          </div>
-          <div class="media">
-            <div class="frame">
-              <video id="v-select" muted playsinline loop preload="none" poster="assets/img/select-poster.webp" width="1600" height="1000"
-                     aria-label="Screen recording: a practice problem on a slide is box-selected, the Solve button is pressed, and Lunar works the answer step by step.">
-                <source src="assets/video/select.mp4" type="video/mp4">
-              </video>
-              <button class="vbtn" type="button" data-toggle aria-label="Pause video"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg><span>Pause</span></button>
-            </div>
-            <p class="shot-cap">Real recording. Lunar's answers can contain mistakes, so double-check anything important.</p>
-          </div>
-        </article>
+      <div class="feature flip reveal">
+        <div class="feature-text">
+          <span class="badge">Quizzes</span>
+          <h3>Quizzes it writes — and marks — for you.</h3>
+          <p>MrSOLIS writes fresh questions from your slides while you answer, marks what you write in your own words against
+            the slides, and tells you exactly what you left out.</p>
+          <ul class="ticks">
+            <li>No question is ever asked twice</li>
+            <li>Fair marking: right, partly right or not yet — with the reason</li>
+            <li>Scores kept in Quizzes and History</li>
+          </ul>
+        </div>
+        <div class="shots-2">
+          <div class="frame zoom" tabindex="0" role="button" data-full="assets/img/shot-score.webp" data-caption="A finished quiz: 3 of 4, with the wrong answer caught and the right one shown, each from its slide."><img src="assets/img/shot-score.webp" width="1600" height="850" loading="lazy" alt="A quiz score of 3 out of 4, with every question reviewed"></div>
+        </div>
+      </div>
 
-        <article class="feature flip reveal">
-          <div class="copy">
-            <span class="num">04</span>
-            <h3>Find anything, instantly.</h3>
-            <p>Type a slide number or just describe what you're after, like “action and reaction”, and Lunar jumps straight to the right slide. It searches by meaning across your whole deck, not just exact words.</p>
-          </div>
-          <div class="media">
-            <div class="frame">
-              <video id="v-search" muted playsinline loop preload="none" poster="assets/img/search-poster.webp" width="1600" height="1000"
-                     aria-label="Screen recording: 'action and reaction' is typed into Find anything, matching slides appear, and clicking one jumps to it.">
-                <source src="assets/video/search.mp4" type="video/mp4">
-              </video>
-              <button class="vbtn" type="button" data-toggle aria-label="Pause video"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg><span>Pause</span></button>
-            </div>
-          </div>
-        </article>
+      <div class="feature reveal" id="maths">
+        <div class="feature-text">
+          <span class="badge white">Highly recommended for maths</span>
+          <h3>Maths you can trust: worked out, not guessed.</h3>
+          <p>AI tutors guess at numbers. MrSOLIS's own maths engines don't: they work every answer out exactly. Bring one maths
+            question from your notes or a past paper, and <b>SQE</b> makes fresh versions of it with new numbers, marks your answers
+            and shows the working — with a scientific calculator right beside the question.</p>
+          <ul class="ticks">
+            <li>Calculus, algebra, equations, statistics, trigonometry, vectors, matrices and word problems</li>
+            <li><b>/mx</b> commands: exact answers, or a clear reason why not</li>
+            <li>Your own question answered too, with every step</li>
+          </ul>
+        </div>
+        <div class="frame zoom" tabindex="0" role="button" data-full="assets/img/shot-sqe.webp" data-caption="SQE practice: a fresh version of the student's own question, with the calculator docked beside it."><img src="assets/img/shot-sqe.webp" width="1375" height="975" loading="lazy" alt="MrSOLIS 2-AL maths practice with a docked scientific calculator"></div>
+      </div>
 
-        <article class="feature reveal">
-          <div class="copy">
-            <span class="num">05</span>
-            <h3>Ask in your own words.</h3>
-            <p>Not sure about something? Ask Lunar right inside the lesson, like “give me an everyday example”. It answers in the context of the slide you're on, so you never lose your place.</p>
-          </div>
-          <div class="media">
-            <div class="frame">
-              <video id="v-chat" muted playsinline loop preload="none" poster="assets/img/chat-poster.webp" width="1600" height="1000"
-                     aria-label="Screen recording: the question 'Can you give me an everyday example of inertia?' is typed into Lunar's chat box and the answer, a bus braking suddenly, is written on the board.">
-                <source src="assets/video/chat.mp4" type="video/mp4">
-              </video>
-              <button class="vbtn" type="button" data-toggle aria-label="Pause video"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg><span>Pause</span></button>
-            </div>
-          </div>
-        </article>
-
+      <div class="feature flip reveal">
+        <div class="feature-text">
+          <span class="badge">Organised</span>
+          <h3>Your notes, subjects and progress — in one place.</h3>
+          <p>Save any lesson or answer to <b>Notes</b>, where each deck gets its own crib sheet. Group decks by course in
+            <b>Subjects</b>, reopen any upload, and watch your progress in <b>History</b>.</p>
+          <ul class="ticks">
+            <li>Export your notes as a file</li>
+            <li>“Find anything” jumps to any word or slide number in your lesson</li>
+            <li>Talk to it: the mic types what you say, and Live is a spoken conversation</li>
+          </ul>
+        </div>
+        <div class="frame zoom" tabindex="0" role="button" data-full="assets/img/shot-subjects.webp" data-caption="Subjects: decks grouped by course, with progress."><img src="assets/img/shot-subjects.webp" width="1600" height="850" loading="lazy" alt="The Subjects page with Physics and Biology"></div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== PRIVACY ===================== -->
-  <section class="section privacy" id="privacy">
+  <!-- ═══ the app tour ═══ -->
+  <section id="tour">
     <div class="wrap">
-      <div class="sec-head center reveal">
-        <p class="eyebrow">Private by design</p>
-        <h2>Your slides never<br>leave <span class="serif grad-text">your computer.</span></h2>
-        <p class="lead">Lunar runs its AI on your own machine. There's no cloud to upload to, no account to create and no API key to paste in, so it works on a plane, in a basement library, or anywhere the Wi&#8209;Fi doesn't.</p>
+      <div class="sec-head center reveal" style="text-align:center">
+        <div class="eyebrow">App tour</div>
+        <h2>Every part of MrSOLIS.</h2>
+        <p>Real screenshots from MrSOLIS 3. Tap any of them for a closer look.</p>
       </div>
-      <div class="proof reveal">
-        <div><div class="big">0</div><h3>accounts</h3><p>Nothing to sign up for. Download it, open it, start learning.</p></div>
-        <div><div class="big">0</div><h3>API keys</h3><p>The model is inside the app. There's no subscription and no usage limit.</p></div>
-        <div><div class="big">0</div><h3>slides uploaded</h3><p>Your files and questions are processed on your PC and never sent anywhere.</p></div>
+      <div class="tabs reveal" role="tablist" aria-label="Parts of the app">
+        <button class="tab" type="button" role="tab" aria-selected="true" data-filter="all">All</button>
+        <button class="tab" type="button" role="tab" aria-selected="false" data-filter="learn">Lessons</button>
+        <button class="tab" type="button" role="tab" aria-selected="false" data-filter="ask">Ask</button>
+        <button class="tab" type="button" role="tab" aria-selected="false" data-filter="quiz">Quizzes</button>
+        <button class="tab" type="button" role="tab" aria-selected="false" data-filter="maths">Maths</button>
+        <button class="tab" type="button" role="tab" aria-selected="false" data-filter="organise">Organise</button>
+        <button class="tab" type="button" role="tab" aria-selected="false" data-filter="settings">Settings &amp; help</button>
       </div>
+      <div class="gallery" id="gallery">
+        <article class="card reveal" data-part="learn">
+          <button type="button" data-full="assets/img/shot-home.webp" data-caption="The board: Drop your slides here to start a lesson — or just ask anything." aria-label="Enlarge: The board"><img src="assets/img/thumb/shot-home.webp" loading="lazy" alt="The board"></button>
+          <div class="card-body"><b>The board</b><span>Drop your slides here to start a lesson — or just ask anything.</span></div>
+        </article>
+        <article class="card reveal" data-part="learn">
+          <button type="button" data-full="assets/img/shot-diagram.webp" data-caption="It reads diagrams: Each slide sits on the silver board, circuits and charts included, with the lesson underneath." aria-label="Enlarge: It reads diagrams"><img src="assets/img/thumb/shot-diagram.webp" loading="lazy" alt="It reads diagrams"></button>
+          <div class="card-body"><b>It reads diagrams</b><span>Each slide sits on the silver board, circuits and charts included, with the lesson underneath.</span></div>
+        </article>
+        <article class="card reveal" data-part="learn">
+          <button type="button" data-full="assets/img/shot-cell.webp" data-caption="Any subject: Physics, biology, economics: the lessons come from your own material." aria-label="Enlarge: Any subject"><img src="assets/img/thumb/shot-cell.webp" loading="lazy" alt="Any subject"></button>
+          <div class="card-body"><b>Any subject</b><span>Physics, biology, economics: the lessons come from your own material.</span></div>
+        </article>
+        <article class="card reveal" data-part="learn">
+          <button type="button" data-full="assets/img/shot-focus.webp" data-caption="Focus mode: Hide everything but the board when it&#x27;s time to concentrate." aria-label="Enlarge: Focus mode"><img src="assets/img/thumb/shot-focus.webp" loading="lazy" alt="Focus mode"></button>
+          <div class="card-body"><b>Focus mode</b><span>Hide everything but the board when it&#x27;s time to concentrate.</span></div>
+        </article>
+        <article class="card reveal" data-part="learn organise">
+          <button type="button" data-full="assets/img/shot-find.webp" data-caption="Find anything: Type a word or a slide number to jump straight to it in your lesson." aria-label="Enlarge: Find anything"><img src="assets/img/thumb/shot-find.webp" loading="lazy" alt="Find anything"></button>
+          <div class="card-body"><b>Find anything</b><span>Type a word or a slide number to jump straight to it in your lesson.</span></div>
+        </article>
+        <article class="card reveal" data-part="ask">
+          <button type="button" data-full="assets/img/shot-ask.webp" data-caption="Ask about the slide: Questions are answered about the slide you&#x27;re on, from your material." aria-label="Enlarge: Ask about the slide"><img src="assets/img/thumb/shot-ask.webp" loading="lazy" alt="Ask about the slide"></button>
+          <div class="card-body"><b>Ask about the slide</b><span>Questions are answered about the slide you&#x27;re on, from your material.</span></div>
+        </article>
+        <article class="card reveal" data-part="ask">
+          <button type="button" data-full="assets/img/shot-highlight.webp" data-caption="Highlight anything: Select part of a slide or lesson, then Explain for a closer look or Solve for a worked answer." aria-label="Enlarge: Highlight anything"><img src="assets/img/thumb/shot-highlight.webp" loading="lazy" alt="Highlight anything"></button>
+          <div class="card-body"><b>Highlight anything</b><span>Select part of a slide or lesson, then Explain for a closer look or Solve for a worked answer.</span></div>
+        </article>
+        <article class="card reveal" data-part="ask maths">
+          <button type="button" data-full="assets/img/shot-solve.webp" data-caption="Worked solutions: Press Solve on a problem: MrSOLIS writes it as a CUSTOM-Mx command, and the engine works it out exactly." aria-label="Enlarge: Worked solutions"><img src="assets/img/thumb/shot-solve.webp" loading="lazy" alt="Worked solutions"></button>
+          <div class="card-body"><b>Worked solutions</b><span>Press Solve on a problem: MrSOLIS writes it as a CUSTOM-Mx command, and the engine works it out exactly.</span></div>
+        </article>
+        <article class="card reveal" data-part="ask">
+          <button type="button" data-full="assets/img/shot-picture.webp" data-caption="Snap a question: A photo of a question from your notebook or a past paper, read and explained." aria-label="Enlarge: Snap a question"><img src="assets/img/thumb/shot-picture.webp" loading="lazy" alt="Snap a question"></button>
+          <div class="card-body"><b>Snap a question</b><span>A photo of a question from your notebook or a past paper, read and explained.</span></div>
+        </article>
+        <article class="card reveal" data-part="quiz">
+          <button type="button" data-full="assets/img/shot-quizzes.webp" data-caption="Quizzes: Pick a deck and how many questions — or practise maths with SQE." aria-label="Enlarge: Quizzes"><img src="assets/img/thumb/shot-quizzes.webp" loading="lazy" alt="Quizzes"></button>
+          <div class="card-body"><b>Quizzes</b><span>Pick a deck and how many questions — or practise maths with SQE.</span></div>
+        </article>
+        <article class="card reveal" data-part="quiz">
+          <button type="button" data-full="assets/img/shot-quiz.webp" data-caption="Marked in your own words: Answer as you&#x27;d write it; MrSOLIS marks it against the slide and says what&#x27;s missing." aria-label="Enlarge: Marked in your own words"><img src="assets/img/thumb/shot-quiz.webp" loading="lazy" alt="Marked in your own words"></button>
+          <div class="card-body"><b>Marked in your own words</b><span>Answer as you&#x27;d write it; MrSOLIS marks it against the slide and says what&#x27;s missing.</span></div>
+        </article>
+        <article class="card reveal" data-part="quiz">
+          <button type="button" data-full="assets/img/shot-score.webp" data-caption="Your score, with reasons: Every question reviewed with the right answer and the slide it came from." aria-label="Enlarge: Your score, with reasons"><img src="assets/img/thumb/shot-score.webp" loading="lazy" alt="Your score, with reasons"></button>
+          <div class="card-body"><b>Your score, with reasons</b><span>Every question reviewed with the right answer and the slide it came from.</span></div>
+        </article>
+        <article class="card reveal" data-part="maths quiz">
+          <button type="button" data-full="assets/img/shot-sqe-start.webp" data-caption="Bring your own maths question: MrSOLIS 2-AL turns one question into a whole practice set." aria-label="Enlarge: Bring your own maths question"><img src="assets/img/thumb/shot-sqe-start.webp" loading="lazy" alt="Bring your own maths question"></button>
+          <div class="card-body"><b>Bring your own maths question</b><span>MrSOLIS 2-AL turns one question into a whole practice set.</span></div>
+        </article>
+        <article class="card reveal" data-part="maths quiz">
+          <button type="button" data-full="assets/img/shot-sqe.webp" data-caption="Practice, with a calculator: Fresh versions with new numbers, and a scientific calculator docked beside the question." aria-label="Enlarge: Practice, with a calculator"><img src="assets/img/thumb/shot-sqe.webp" loading="lazy" alt="Practice, with a calculator"></button>
+          <div class="card-body"><b>Practice, with a calculator</b><span>Fresh versions with new numbers, and a scientific calculator docked beside the question.</span></div>
+        </article>
+        <article class="card reveal" data-part="maths quiz">
+          <button type="button" data-full="assets/img/shot-sqe-review.webp" data-caption="Every answer, with the working: Your score, your own question answered, and the working for each version." aria-label="Enlarge: Every answer, with the working"><img src="assets/img/thumb/shot-sqe-review.webp" loading="lazy" alt="Every answer, with the working"></button>
+          <div class="card-body"><b>Every answer, with the working</b><span>Your score, your own question answered, and the working for each version.</span></div>
+        </article>
+        <article class="card reveal" data-part="maths">
+          <button type="button" data-full="assets/img/shot-mx.webp" data-caption="Exact maths with /mx: Type /mx and a command: CUSTOM-Mx works it out exactly, or says why it can&#x27;t." aria-label="Enlarge: Exact maths with /mx"><img src="assets/img/thumb/shot-mx.webp" loading="lazy" alt="Exact maths with /mx"></button>
+          <div class="card-body"><b>Exact maths with /mx</b><span>Type /mx and a command: CUSTOM-Mx works it out exactly, or says why it can&#x27;t.</span></div>
+        </article>
+        <article class="card reveal" data-part="maths organise">
+          <button type="button" data-full="assets/img/shot-calc.webp" data-caption="A calculator on the board: Type /calculator for a scientific calculator right beside your lesson." aria-label="Enlarge: A calculator on the board"><img src="assets/img/thumb/shot-calc.webp" loading="lazy" alt="A calculator on the board"></button>
+          <div class="card-body"><b>A calculator on the board</b><span>Type /calculator for a scientific calculator right beside your lesson.</span></div>
+        </article>
+        <article class="card reveal" data-part="organise maths">
+          <button type="button" data-full="assets/img/shot-tools.webp" data-caption="Tools: A scientific calculator, a step-by-step solver, a formula sheet and a study timer." aria-label="Enlarge: Tools"><img src="assets/img/thumb/shot-tools.webp" loading="lazy" alt="Tools"></button>
+          <div class="card-body"><b>Tools</b><span>A scientific calculator, a step-by-step solver, a formula sheet and a study timer.</span></div>
+        </article>
+        <article class="card reveal" data-part="organise">
+          <button type="button" data-full="assets/img/shot-subjects.webp" data-caption="Subjects: Group your decks by course and see how much of each you&#x27;ve studied." aria-label="Enlarge: Subjects"><img src="assets/img/thumb/shot-subjects.webp" loading="lazy" alt="Subjects"></button>
+          <div class="card-body"><b>Subjects</b><span>Group your decks by course and see how much of each you&#x27;ve studied.</span></div>
+        </article>
+        <article class="card reveal" data-part="organise">
+          <button type="button" data-full="assets/img/shot-uploads.webp" data-caption="Uploads: Every deck you&#x27;ve opened, ready to pick up where you left off." aria-label="Enlarge: Uploads"><img src="assets/img/thumb/shot-uploads.webp" loading="lazy" alt="Uploads"></button>
+          <div class="card-body"><b>Uploads</b><span>Every deck you&#x27;ve opened, ready to pick up where you left off.</span></div>
+        </article>
+        <article class="card reveal" data-part="organise">
+          <button type="button" data-full="assets/img/shot-notes.webp" data-caption="Notes: Your own notes beside the lessons and answers you saved, and export to a file." aria-label="Enlarge: Notes"><img src="assets/img/thumb/shot-notes.webp" loading="lazy" alt="Notes"></button>
+          <div class="card-body"><b>Notes</b><span>Your own notes beside the lessons and answers you saved, and export to a file.</span></div>
+        </article>
+        <article class="card reveal" data-part="organise">
+          <button type="button" data-full="assets/img/shot-crib.webp" data-caption="A crib sheet for every deck: Every formula and definition in a deck, quoted exactly as your slides print them." aria-label="Enlarge: A crib sheet for every deck"><img src="assets/img/thumb/shot-crib.webp" loading="lazy" alt="A crib sheet for every deck"></button>
+          <div class="card-body"><b>A crib sheet for every deck</b><span>Every formula and definition in a deck, quoted exactly as your slides print them.</span></div>
+        </article>
+        <article class="card reveal" data-part="organise">
+          <button type="button" data-full="assets/img/shot-history.webp" data-caption="History: Your lessons, quizzes and practice at a glance." aria-label="Enlarge: History"><img src="assets/img/thumb/shot-history.webp" loading="lazy" alt="History"></button>
+          <div class="card-body"><b>History</b><span>Your lessons, quizzes and practice at a glance.</span></div>
+        </article>
+        <article class="card reveal" data-part="settings">
+          <button type="button" data-full="assets/img/shot-brains.webp" data-caption="Choose your brain: Speedy or Smarts: download once, then it works offline." aria-label="Enlarge: Choose your brain"><img src="assets/img/thumb/shot-brains.webp" loading="lazy" alt="Choose your brain"></button>
+          <div class="card-body"><b>Choose your brain</b><span>Speedy or Smarts: download once, then it works offline.</span></div>
+        </article>
+        <article class="card reveal" data-part="settings">
+          <button type="button" data-full="assets/img/shot-settings.webp" data-caption="Make it yours: Lesson length, text size on the board, calmer motion, and how fast MrSOLIS speaks." aria-label="Enlarge: Make it yours"><img src="assets/img/thumb/shot-settings.webp" loading="lazy" alt="Make it yours"></button>
+          <div class="card-body"><b>Make it yours</b><span>Lesson length, text size on the board, calmer motion, and how fast MrSOLIS speaks.</span></div>
+        </article>
+        <article class="card reveal" data-part="settings">
+          <button type="button" data-full="assets/img/shot-help.webp" data-caption="How to use: A short guide to everything, built into the app." aria-label="Enlarge: How to use"><img src="assets/img/thumb/shot-help.webp" loading="lazy" alt="How to use"></button>
+          <div class="card-body"><b>How to use</b><span>A short guide to everything, built into the app.</span></div>
+        </article>
+        <article class="card reveal" data-part="settings">
+          <button type="button" data-full="assets/img/shot-buy.webp" data-caption="Buy inside MrSOLIS: US$1 (GHS 12), paid once by Mobile Money. Already have a code? Type it once and you&#x27;re done." aria-label="Enlarge: Buy inside MrSOLIS"><img class="fit" src="assets/img/thumb/shot-buy.webp" loading="lazy" alt="Buy inside MrSOLIS"></button>
+          <div class="card-body"><b>Buy inside MrSOLIS</b><span>US$1 (GHS 12), paid once by Mobile Money. Already have a code? Type it once and you&#x27;re done.</span></div>
+        </article>
+        <article class="card reveal" data-part="settings">
+          <button type="button" data-full="assets/img/shot-momo.webp" data-caption="Pay by Mobile Money: Send GHS 12 with your reference; MrSOLIS activates by itself once it&#x27;s confirmed." aria-label="Enlarge: Pay by Mobile Money"><img class="fit" src="assets/img/thumb/shot-momo.webp" loading="lazy" alt="Pay by Mobile Money"></button>
+          <div class="card-body"><b>Pay by Mobile Money</b><span>Send GHS 12 with your reference; MrSOLIS activates by itself once it&#x27;s confirmed.</span></div>
+        </article>
+      </div>
+      <p class="swipe-hint" aria-hidden="true">Swipe for more →</p>
     </div>
   </section>
 
-  <!-- ===================== UNDER THE HOOD ===================== -->
-  <section class="section" id="specs" style="padding-top:0">
+  <!-- ═══ watch ═══ -->
+  <section id="watch">
     <div class="wrap">
       <div class="sec-head reveal">
-        <p class="eyebrow">Under the hood</p>
-        <h2>One installer. <span class="serif grad-text">Everything inside.</span></h2>
-        <p class="lead">The download is large because the AI is in it. After installing, Lunar never needs to fetch a model.</p>
+        <div class="eyebrow">Watch</div>
+        <h2>See MrSOLIS at work.</h2>
+        <p>Two screen recordings from MrSOLIS 3. They only download when you press play, to save your data.</p>
       </div>
-      <dl class="specs reveal">
-        <div class="spec"><dt>Teaches with</dt><dd>Qwen2.5&#8209;1.5B&#8209;Instruct<small>A compact open model, 4&#8209;bit, built to run on an ordinary laptop CPU.</small></dd></div>
-        <div class="spec"><dt>Searches with</dt><dd>nomic&#8209;embed&#8209;text v1.5<small>Finds the right slide by meaning, not just matching words.</small></dd></div>
-        <div class="spec"><dt>Runs on</dt><dd>llama.cpp, CPU only<small>No graphics card needed.</small></dd></div>
-        <div class="spec"><dt>Reads</dt><dd>PDF, PPTX, DOCX, XLSX, CSV, TXT, images<small>OCR included for scans and photos of slides.</small></dd></div>
-        <div class="spec"><dt>Size</dt><dd><span data-size>1.4 GB</span> download, 2.2 GB installed<small>The models are bundled in the installer.</small></dd></div>
-        <div class="spec"><dt>Needs</dt><dd>Windows 10 or 11 (64&#8209;bit)<small>8 GB RAM recommended. A CPU with AVX2: most PCs from 2014 onward.</small></dd></div>
-      </dl>
-    </div>
-  </section>
-
-  <!-- ===================== DOWNLOAD ===================== -->
-  <section class="section" id="download" style="padding-top:0">
-    <div class="wrap">
-      <div class="dl-card reveal">
-        <div class="dl-top">
-          <div>
-            <p class="eyebrow">Version <b data-version>1.0.0</b> · Windows</p>
-            <h2 style="margin-top:16px">Free. Offline. <span class="serif grad-text">Yours.</span></h2>
-            <p>One download, one installer, nothing else to set up. Lunar is a free indie app and isn't code-signed yet, so the install notes below explain what Windows may ask you.</p>
-            <div class="os-row">
-              <span class="os on">Windows 10 / 11</span>
-              <span class="os">macOS · coming</span>
-              <span class="os">Linux · coming</span>
-            </div>
-          </div>
-          <div class="dl-act">
-            <a class="btn btn-primary btn-lg" href="https://github.com/aduamankwahkwasi292-wq/lunar-app/releases/download/v1.0.0/Lunar-Setup-1.0.0.exe" data-dl>
-              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-4.5-4.5M12 15l4.5-4.5M4.5 20.5h15"/></svg>
-              Download <span data-filename>Lunar-Setup-1.0.0.exe</span>
-            </a>
-            <div class="dl-meta"><span><span data-size>1.4 GB</span></span><span>Windows 10/11 · 64&#8209;bit</span><span>Free</span></div>
-            <p class="demo-link">No slides handy? Try the deck from the video: <a href="assets/demo/Newtons-Laws-Lecture-4.pdf" download>Newton's Laws (PDF, 5 slides)</a>.</p>
-          </div>
+      <div class="videos">
+        <div class="video-card reveal">
+          <div class="frame"><video controls preload="none" playsinline poster="assets/img/poster-highlight.webp" src="assets/video/highlight.mp4"></video></div>
+          <div class="video-meta"><b>Highlight, save, explain</b><span>0:55 · 0.9 MB</span></div>
+          <p>Highlight part of a slide to save it to Notes, or press Explain for a closer look at it.</p>
         </div>
-
-        <ol class="steps" id="install">
-          <li><h3>Download the installer</h3><p>Save <b data-filename>Lunar-Setup-1.0.0.exe</b>. It's large (<span data-size>1.4 GB</span>) because the AI model is inside.</p></li>
-          <li><h3>Run it</h3><p>Windows may say it “protected your PC” because the app is new and unsigned. Choose <b>More info</b>, then <b>Run anyway</b>.</p></li>
-          <li><h3>Open Lunar and upload</h3><p>Launch Lunar from your desktop or Start menu, drop in a PDF or PowerPoint, and step into class.</p></li>
-        </ol>
-
-        <div class="verify">
-          <b>SHA&#8209;256</b>
-          <code id="sha" data-sha>c231b63fd1af77ea066a3c79876c56d4668062b07c0d2873717cc32327846de7</code>
-          <button class="copy-btn" type="button" id="copy-sha">Copy</button>
+        <div class="video-card reveal">
+          <div class="frame"><video controls preload="none" playsinline poster="assets/img/poster-tour.webp" src="assets/video/tour.mp4"></video></div>
+          <div class="video-meta"><b>The full walkthrough</b><span>10:00 · 10.7 MB</span></div>
+          <p>A lesson from slides, Subjects, Notes, a quiz (sped up), maths practice, Tools, Settings and a video, explained.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== FAQ ===================== -->
-  <section class="section" id="faq" style="padding-top:0">
+  <!-- ═══ engines ═══ -->
+  <section id="engines">
     <div class="wrap">
-      <div class="sec-head center reveal">
-        <p class="eyebrow">Questions</p>
-        <h2>Good to <span class="serif grad-text">know.</span></h2>
+      <div class="sec-head reveal">
+        <div class="eyebrow">Made for MrSOLIS</div>
+        <h2>Our own engines under the hood.</h2>
+        <p>Built by Behemoth Group to do what AI models alone can't. They're great, but not perfect — and every update
+          improves them, for free.</p>
       </div>
+      <div class="engines">
+        <div class="engine reveal"><span class="badge">Maths</span><h3>CUSTOM-Mx</h3><p>Works calculations out exactly instead of
+          letting the brain guess. A word problem becomes a command you can check before it runs.</p></div>
+        <div class="engine reveal"><span class="badge">Practice</span><h3>CUSTOM-SQE</h3><p>Turns one maths question into a fresh
+          practice set with new numbers, in your own words, with clean answers — each checked a second way.</p></div>
+        <div class="engine reveal"><span class="badge">Memory</span><h3>CUSTOM-Kx</h3><p>Keeps the brain light on your laptop's memory:
+          about 45% less after a long study session, so older laptops keep up.</p></div>
+      </div>
+    </div>
+  </section>
 
+  <!-- ═══ price ═══ -->
+  <section id="price">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">Price</div>
+        <h2>One price. Yours to keep.</h2>
+        <p>No subscription and no account. Pay once by Mobile Money, inside MrSOLIS.</p>
+      </div>
+      <div class="price-wrap">
+        <div class="price-card reveal">
+          <div class="eyebrow">MrSOLIS 3 · licence for one computer</div>
+          <div class="price"><b>US$1</b><span>GHS 12, paid once</span></div>
+          <p class="sub">Everything in MrSOLIS, for as long as you like.</p>
+          <ul class="ticks">
+            <li>Every feature — lessons, quizzes, maths engines, voice and tools</li>
+            <li>All updates free, new brains included</li>
+            <li>Works offline after activation</li>
+            <li>Refund within 24 hours if it won't run on your computer</li>
+          </ul>
+          <a class="btn btn-primary btn-lg" href="https://github.com/aduamankwahkwasi292-wq/lunar/releases/latest" data-dl>Download MrSOLIS</a>
+        </div>
+        <div class="reveal">
+          <ol class="steps">
+            <li><b>Install MrSOLIS</b><p>Download it and run the installer (see <a href="#install">Install</a>).</p></li>
+            <li><b>Press “Buy MrSOLIS”</b><p>On the activation screen. Type your email (your receipt goes there) and the Mobile
+              Money number you'll pay from.</p></li>
+            <li><b>Send GHS 12 by Mobile Money</b><p>Use the reference MrSOLIS shows you.</p>
+              <dl class="momo"><dt>Number</dt><dd>020 483 2725</dd><dt>Network</dt><dd>Telecel Cash</dd><dt>Name</dt><dd>Janet Nartey</dd></dl></li>
+            <li><b>MrSOLIS activates by itself</b><p>We confirm your payment by hand, usually within a few hours. You can close
+              MrSOLIS meanwhile.</p></li>
+          </ol>
+        </div>
+      </div>
+      <figure class="buy-flow reveal">
+        <div class="frame zoom" tabindex="0" role="button" data-full="assets/img/buy-flow.webp" data-caption="Inside MrSOLIS: type your licence code, or buy one, then send GHS 12 by Mobile Money with the reference it gives you."><img src="assets/img/buy-flow.webp" width="1600" height="648" loading="lazy" alt="Three MrSOLIS screens: Activate, Buy MrSOLIS for US$1, and the Mobile Money payment details"></div>
+        <figcaption class="caption">Activate with a code, or buy one right inside MrSOLIS and pay by Mobile Money.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ═══ install ═══ -->
+  <section id="install">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">Install</div>
+        <h2>Up and running in a few minutes.</h2>
+      </div>
+      <div class="install">
+        <div class="reveal">
+          <ol class="steps">
+            <li><b>Download and open the installer</b><p>It's one file for Windows 10 and 11.</p></li>
+            <li><b>“Windows protected your PC”?</b><p>Click <span class="path">More info</span>, then <span class="path">Run anyway</span>.
+              Windows shows this for apps that aren't signed by Microsoft yet, like MrSOLIS.</p></li>
+            <li><b>Blocked by Smart App Control?</b><p>Some Windows 11 PCs block apps that aren't signed. Open
+              <span class="path">Windows Security</span> → <span class="path">App &amp; browser control</span> →
+              <span class="path">Smart App Control settings</span>, choose <span class="path">Off</span>, then open the installer again.</p></li>
+            <li><b>Choose a brain</b><p>The first time MrSOLIS opens, pick <b>Speedy</b> (0.73 GB) or <b>Smarts</b> (1.95 GB).
+              It downloads once and then works offline.</p></li>
+            <li><b>Activate</b><p>Type your licence code, or buy one inside MrSOLIS for US$1.</p></li>
+          </ol>
+        </div>
+        <div class="reveal">
+          <div class="note">
+            <b>Before you turn Smart App Control off</b>
+            <p>It's one of Windows' protections, so only turn it off if you're comfortable doing so. Since Windows' April 2026
+              update it can be switched back on in the same place — but Microsoft says its October 2026 update (KB5127648)
+              stops that switch working on some PCs until a fix arrives.</p>
+          </div>
+          <h3 style="margin:30px 0 14px">What you need</h3>
+          <dl class="req">
+            <div><dt>System</dt><dd>Windows 10 or 11, 64-bit (macOS and Linux coming soon)</dd></div>
+            <div><dt>Memory</dt><dd>4 GB of RAM (8 GB for Smarts)</dd></div>
+            <div><dt>Disk</dt><dd>About 3 GB free</dd></div>
+            <div><dt>Internet</dt><dd>Once to activate and download a brain; then a quick licence check when you're online</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FAQ ═══ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head center reveal" style="text-align:center">
+        <div class="eyebrow">FAQ</div>
+        <h2>Questions, answered.</h2>
+      </div>
       <div class="faq reveal">
-        <details>
-          <summary>Does Lunar really work without internet?</summary>
-          <div class="ans"><p>Yes. The AI model, slide search and OCR are all inside the app and run on your PC. Once it's installed you can turn Wi&#8209;Fi off and keep studying. Your slides and questions are never sent anywhere.</p></div>
-        </details>
+        <details><summary>Does MrSOLIS need the internet?</summary><p>Only to activate your licence once, download a brain once,
+          and check your licence briefly once a day when you're online. Lessons, chat, quizzes and maths all run on your computer.</p></details>
+        <details><summary>Is my material private?</summary><p>Yes. Your slides, notes, photos and questions are read on your
+          computer and never uploaded. MrSOLIS has no account, no adverts and no tracking.</p></details>
+        <details><summary>What can I study with it?</summary><p>Any course with slides or notes: PDF, PowerPoint and Word files,
+          photos of notes, and lecture videos. Maths and science get extra help from the maths engines.</p></details>
+        <details><summary>Is it good at maths?</summary><p>For maths, use SQE and /mx — they work every answer out exactly. Like
+          every AI, the brains can slip on numbers, so we highly recommend SQE for maths practice. Check important answers
+          against your notes either way.</p></details>
+        <details><summary>Which brain should I choose?</summary><p><b>Speedy</b> is the fastest and lightest — best for older
+          laptops or 4–8 GB of RAM. <b>Smarts</b> gives the best answers on 8 GB laptops and up. You can switch any time in Settings.</p></details>
+        <details><summary>Can I use one licence on two computers?</summary><p>No — each licence is for one computer, the one you
+          activate it on.</p></details>
+        <details><summary>What if it won't run on my computer?</summary><p>Email us within 24 hours of buying, with your proof
+          of payment and a screen recording of the problem, and we'll refund you. See the Terms of use, section 7.</p></details>
+        <details><summary>Are updates free?</summary><p>Yes — every update, including new and improved brains. MrSOLIS tells
+          you its size and asks before downloading one.</p></details>
+        <details><summary>Why does Windows warn me about the installer?</summary><p>MrSOLIS isn't signed by Microsoft yet, so
+          Windows treats it as an unknown app. See the Install steps above.</p></details>
+      </div>
+    </div>
+  </section>
 
-        <details>
-          <summary>How good is a model this small?</summary>
-          <div class="ans"><p>Lunar uses a compact 1.5&#8209;billion&#8209;parameter model so it can run on ordinary laptops without a GPU. It's good at explaining and working through your own slides, but it's smaller than the big cloud models and <b>it can make mistakes, especially with maths</b>. Treat it as a patient study partner and double-check anything important.</p></div>
-        </details>
-
-        <details>
-          <summary>Windows says it “protected my PC”. Is that safe?</summary>
-          <div class="ans">
-            <p>That's Microsoft SmartScreen reacting to a new app that isn't code-signed yet (Lunar is a free indie project, and signing certificates cost money). To continue:</p>
-            <ol><li>Click <b>More info</b> on the blue window.</li><li>Click <b>Run anyway</b>.</li></ol>
-            <p>You can check your download against the SHA&#8209;256 checksum on this page. In PowerShell: <code>Get-FileHash .\Lunar-Setup-1.0.0.exe</code>. Edge or Chrome may also ask you to confirm keeping the file because of its size and newness.</p>
-          </div>
-        </details>
-
-        <details>
-          <summary>“Lunar could not start” or “An Application Control policy has blocked this file”</summary>
-          <div class="ans">
-            <p>This happens on Windows 11 PCs that have <b>Smart App Control</b> switched on. It blocks apps that aren't code-signed, and unlike SmartScreen it has no “Run anyway” button. Lunar can't run while it's enforcing.</p>
-            <p>You can find the setting under <b>Windows Security → App &amp; browser control → Smart App Control settings</b>. Whether to change it is your decision, so read Microsoft's description of it first. Lunar isn't code-signed yet, which is why this is a known limitation of the current release.</p>
-          </div>
-        </details>
-
-        <details>
-          <summary>Which files can I upload?</summary>
-          <div class="ans"><p>PDF, PowerPoint (PPTX), Word (DOCX), Excel (XLSX), CSV and plain text, plus images such as photos of slides or whiteboards, which are read with built-in OCR. Very large files take a little longer to read.</p></div>
-        </details>
-
-        <details>
-          <summary>Why is the download so big?</summary>
-          <div class="ans"><p>Because the AI is inside it. The installer includes the teaching model and the search model (about 1.2&nbsp;GB between them), so there's nothing else to download afterwards. Installed, Lunar takes about 2.2&nbsp;GB of disk space.</p></div>
-        </details>
-
-        <details>
-          <summary>Where does Lunar keep my files?</summary>
-          <div class="ans"><p>On your own PC, in Lunar's data folder: <code>%APPDATA%\lunar-desktop</code>. That's where uploaded decks and their cached slide images live. You can delete that folder at any time, and uninstalling Lunar from Windows Settings removes the app.</p></div>
-        </details>
-
-        <details>
-          <summary>Is it free? What about Mac and Linux?</summary>
-          <div class="ans"><p>Lunar is free to download and use. Windows is available now, and macOS and Linux versions are planned.</p></div>
-        </details>
-
-        <details>
-          <summary>Who makes Lunar?</summary>
-          <div class="ans"><p>Lunar is built by Kwasi Kwakye and Alex Nyanteng.</p></div>
-        </details>
+  <section class="final">
+    <div class="wrap reveal">
+      <h2>Start studying smarter today.</h2>
+      <p class="lead">Your slides, your pace, your laptop. US$1, once.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary btn-lg" href="https://github.com/aduamankwahkwasi292-wq/lunar/releases/latest" data-dl>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.6 10.5 4.5v7H3zM11.6 4.35 21 3v8.5h-9.4zM3 12.5h7.5v7L3 18.4zM11.6 12.5H21V21l-9.4-1.4z"/></svg>
+          Download for Windows
+        </a>
       </div>
     </div>
   </section>
 </main>
 
-<footer class="foot">
-  <div class="wrap foot-in">
-    <a class="brand" href="#top" style="font-size:16px"><img src="assets/img/icon.png" alt="" width="24" height="24">Lunar</a>
-    <span>Built by Kwasi Kwakye &amp; Alex Nyanteng</span>
-    <nav class="foot-links" aria-label="Footer">
-      <a href="#download">Download</a>
-      <a href="#faq">FAQ</a>
-      <a href="https://github.com/aduamankwahkwasi292-wq/lunar-app/releases">All releases</a>
-    </nav>
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>© 2026 Behemoth Group · MrSOLIS 3</div>
+      <nav aria-label="Footer">
+        <a href="terms.html">Terms of use</a>
+        <a href="mailto:jonsonwhocancreate@gmail.com">Contact</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+    <p class="fine">CUSTOM-Mx, CUSTOM-SQE and CUSTOM-Kx, and their names, belong to Behemoth Group. MrSOLIS is built with open
+      software and open AI models; their licences are listed in the app under Settings → About → Licences &amp; credits.
+      Windows is a trademark of Microsoft.</p>
   </div>
 </footer>
 
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Screenshot">
+  <button class="x" type="button" aria-label="Close">×</button>
+  <button class="nav-arrow prev" type="button" aria-label="Previous">‹</button>
+  <figure><img alt=""><figcaption></figcaption></figure>
+  <button class="nav-arrow next" type="button" aria-label="Next">›</button>
+</div>
 <script src="app.js" defer></script>
 </body>
 </html>

@@ -1,67 +1,75 @@
-/* Lunar site — small, dependency-free. Everything degrades gracefully without JS. */
+/* MrSOLIS 3 website — small and dependency-free. The page works without it; this adds the niceties. */
 (() => {
   'use strict';
   const $ = (s, el = document) => el.querySelector(s);
   const $$ = (s, el = document) => Array.from(el.querySelectorAll(s));
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ---------- nav shadow on scroll ---------- */
+  /* nav background once the page scrolls */
   const nav = $('#nav');
   const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 12);
   onScroll();
   addEventListener('scroll', onScroll, { passive: true });
 
-  /* ---------- reveal on scroll ---------- */
+  /* reveal sections as they come into view */
   if ('IntersectionObserver' in window && !reduceMotion) {
     const io = new IntersectionObserver((entries) => {
-      for (const e of entries) {
-        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-      }
-    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+      for (const e of entries) if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }, { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
     $$('.reveal').forEach((el) => io.observe(el));
   } else {
     $$('.reveal').forEach((el) => el.classList.add('in'));
   }
 
-  /* ---------- videos: play when visible, always user-pausable ---------- */
-  const ICONS = {
-    pause: '<path d="M6 4h4v16H6zM14 4h4v16h-4z"/>',
-    play: '<path d="M7 4.5v15l12.5-7.5z"/>',
-  };
-  const videos = $$('video');
-  for (const v of videos) {
-    const btn = $('[data-toggle]', v.parentElement);
-    const setBtn = (playing) => {
-      if (!btn) return;
-      $('span', btn).textContent = playing ? 'Pause' : 'Play';
-      btn.setAttribute('aria-label', playing ? 'Pause video' : 'Play video');
-      $('svg', btn).innerHTML = playing ? ICONS.pause : ICONS.play;
-    };
-    v.addEventListener('play', () => setBtn(true));
-    v.addEventListener('pause', () => setBtn(false));
-    if (btn) {
-      btn.addEventListener('click', () => {
-        if (v.paused) { delete v.dataset.userPaused; v.play().catch(() => {}); }
-        else { v.dataset.userPaused = '1'; v.pause(); }
-      });
-    }
-    if (reduceMotion) { v.controls = true; if (btn) btn.hidden = true; }
-  }
-  if (!reduceMotion && 'IntersectionObserver' in window) {
-    const vio = new IntersectionObserver((entries) => {
-      for (const e of entries) {
-        const v = e.target;
-        if (e.isIntersecting) {
-          if (!v.dataset.userPaused) { v.preload = 'auto'; v.play().catch(() => {}); }
-        } else {
-          v.pause();
-        }
-      }
-    }, { threshold: 0.35 });
-    videos.forEach((v) => vio.observe(v));
+  /* the tour: show one part of the app at a time */
+  const tabs = $$('.tab');
+  for (const t of tabs) {
+    t.addEventListener('click', () => {
+      tabs.forEach((x) => x.setAttribute('aria-selected', String(x === t)));
+      const want = t.dataset.filter;
+      $$('.gallery .card').forEach((c) => { c.hidden = want !== 'all' && !c.dataset.part.split(' ').includes(want); });
+    });
   }
 
-  /* ---------- quiet starfield ---------- */
+  /* a bigger look at any screenshot (arrows and Esc work) */
+  const box = $('#lightbox');
+  const shots = $$('[data-full]');
+  let cur = null;
+  const visible = () => shots.filter((s) => !s.closest('[hidden]'));
+  const open = (el) => {
+    cur = el;
+    $('img', box).src = el.dataset.full;
+    $('img', box).alt = el.dataset.caption || '';
+    $('figcaption', box).textContent = el.dataset.caption || '';
+    box.hidden = false;
+    document.body.style.overflow = 'hidden';
+    $('.x', box).focus();
+  };
+  const close = () => { box.hidden = true; document.body.style.overflow = ''; if (cur) cur.focus(); };
+  const step = (d) => {
+    const list = visible();
+    if (list.length) open(list[(list.indexOf(cur) + d + list.length) % list.length]);
+  };
+  shots.forEach((s) => {
+    s.addEventListener('click', () => open(s));
+    if (s.tagName !== 'BUTTON') {             // the framed screenshots are role="button" divs: Enter and Space open them too
+      s.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(s); } });
+    }
+  });
+  if (box) {
+    $('.x', box).addEventListener('click', close);
+    $('.prev', box).addEventListener('click', (e) => { e.stopPropagation(); step(-1); });
+    $('.next', box).addEventListener('click', (e) => { e.stopPropagation(); step(1); });
+    box.addEventListener('click', (e) => { if (e.target === box) close(); });
+    addEventListener('keydown', (e) => {
+      if (box.hidden) return;
+      if (e.key === 'Escape') close();
+      if (e.key === 'ArrowRight') step(1);
+      if (e.key === 'ArrowLeft') step(-1);
+    });
+  }
+
+  /* the starfield: the same quiet sky as the app */
   const cv = $('#stars');
   if (cv && cv.getContext) {
     const cx = cv.getContext('2d');
@@ -70,68 +78,44 @@
       dpr = Math.min(window.devicePixelRatio || 1, 2);
       w = cv.width = Math.floor(innerWidth * dpr);
       h = cv.height = Math.floor(innerHeight * dpr);
-      const n = Math.min(150, Math.floor((innerWidth * innerHeight) / 12000));
-      stars = Array.from({ length: n }, () => ({
-        x: Math.random() * w, y: Math.random() * h, z: Math.random(),
-        r: (Math.random() * 1.1 + 0.25) * dpr, t: Math.random() * 6.28,
-      }));
+      const n = Math.min(160, Math.floor((innerWidth * innerHeight) / 11000));
+      stars = Array.from({ length: n }, () => ({ x: Math.random() * w, y: Math.random() * h, z: Math.random(), r: (Math.random() * 1.0 + 0.25) * dpr, t: Math.random() * 6.28 }));
     };
     const draw = (animate) => {
       cx.clearRect(0, 0, w, h);
       for (const s of stars) {
-        if (animate) { s.t += 0.012; s.y += (0.015 + s.z * 0.035) * dpr; if (s.y > h) { s.y = 0; s.x = Math.random() * w; } }
-        const tw = 0.55 + 0.45 * Math.sin(s.t);
+        if (animate) s.t += 0.01;
+        cx.globalAlpha = (0.18 + s.z * 0.5) * (animate ? 0.7 + 0.3 * Math.sin(s.t) : 1);
         cx.beginPath();
         cx.arc(s.x, s.y, s.r, 0, 6.2832);
-        cx.fillStyle = `rgba(190,208,245,${(tw * (0.16 + s.z * 0.4)).toFixed(3)})`;
+        cx.fillStyle = '#fff';
         cx.fill();
       }
     };
     resize();
     addEventListener('resize', () => { resize(); draw(false); });
-    if (reduceMotion) { draw(false); }
+    if (reduceMotion) draw(false);
     else {
-      const loop = () => { if (!document.hidden) draw(true); requestAnimationFrame(loop); };
+      let last = 0;
+      const loop = (t) => { if (!document.hidden && t - last > 90) { draw(true); last = t; } requestAnimationFrame(loop); };
       requestAnimationFrame(loop);
     }
   }
 
-  /* ---------- copy checksum ---------- */
-  const copyBtn = $('#copy-sha');
-  if (copyBtn) {
-    copyBtn.addEventListener('click', async () => {
-      const el = $('#sha');
-      const text = el.textContent.trim();
-      try {
-        await navigator.clipboard.writeText(text);
-      } catch (_) {
-        const range = document.createRange();
-        range.selectNodeContents(el);
-        const sel = getSelection();
-        sel.removeAllRanges(); sel.addRange(range);
-        try { document.execCommand('copy'); } catch (__) { /* user can copy manually */ }
-      }
-      copyBtn.textContent = 'Copied';
-      setTimeout(() => { copyBtn.textContent = 'Copy'; }, 1600);
-    });
-  }
-
-  /* ---------- keep the download button on the newest release ----------
-     The HTML ships with the v1.0.0 link so it works with no JS or if GitHub's API is
-     unreachable; when a newer release is published this swaps in its file, size and checksum. */
-  const REPO = 'aduamankwahkwasi292-wq/lunar-app';
+  /* keep the download button on the newest MrSOLIS release (the HTML's link works without this) */
+  const REPO = 'aduamankwahkwasi292-wq/lunar';
   const fmtSize = (b) => (b >= 2 ** 30 ? (b / 2 ** 30).toFixed(1) + ' GB' : Math.round(b / 2 ** 20) + ' MB');
   fetch(`https://api.github.com/repos/${REPO}/releases/latest`, { headers: { Accept: 'application/vnd.github+json' } })
-    .then((r) => (r.ok ? r.json() : Promise.reject(new Error('HTTP ' + r.status))))
+    .then((r) => (r.ok ? r.json() : Promise.reject(new Error(`HTTP ${r.status}`))))
     .then((rel) => {
-      const asset = (rel.assets || []).find((a) => /^Lunar-Setup-.+\.exe$/i.test(a.name));
+      // MrSOLIS 3 or later only (the builds are still named Lunar-Setup-<version>.exe), never Lunar 1
+      const major = parseInt(String(rel.tag_name || '').replace(/^v/i, ''), 10) || 0;
+      const asset = (rel.assets || []).find((a) => /^(MrSOLIS|Lunar).*Setup.*\.exe$/i.test(a.name)
+        && (/^MrSOLIS/i.test(a.name) || major >= 3)) || null;
       if (!asset) return;
       $$('[data-dl]').forEach((el) => { el.href = asset.browser_download_url; });
-      $$('[data-version]').forEach((el) => { el.textContent = String(rel.tag_name || '').replace(/^v/i, ''); });
       $$('[data-size]').forEach((el) => { el.textContent = fmtSize(asset.size); });
-      $$('[data-filename]').forEach((el) => { el.textContent = asset.name; });
-      const sha = $('#sha');
-      if (sha && typeof asset.digest === 'string' && asset.digest.startsWith('sha256:')) sha.textContent = asset.digest.slice(7);
+      $$('[data-version]').forEach((el) => { el.textContent = String(rel.tag_name || '').replace(/^v/i, ''); });
     })
-    .catch(() => { /* keep the static defaults */ });
+    .catch(() => { /* keep the page's own link */ });
 })();
