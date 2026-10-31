@@ -212,6 +212,8 @@ section { padding: 96px 0; }
 }
 .steps b { color: #fff; font-weight: 650; }
 .steps p { margin: 4px 0 0; color: #c4c6ca; font-size: 15.5px; }
+.pay-alt { margin: 16px 2px 0; font-size: 14.5px; color: var(--dim); }
+.pay-alt b { color: #fff; font-weight: 600; font-family: var(--mono); }
 .momo { display: grid; grid-template-columns: auto 1fr; gap: 4px 14px; margin-top: 10px; font-size: 15px; }
 .momo dt { color: var(--dim); }
 .momo dd { margin: 0; color: #fff; font-weight: 600; font-family: var(--mono); }
