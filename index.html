@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MrSOLIS 3 — Your study tutor, on your own computer</title>
-<meta name="description" content="MrSOLIS 3 teaches your lecture slides slide by slide, answers your questions, marks your quizzes and works maths out exactly. It runs on your Windows laptop, works offline, and costs US$1, once.">
+<title>MrSOLIS 3 · Your lecture slides, taught to you</title>
+<meta name="description" content="MrSOLIS teaches your lecture slides one at a time, answers your questions, tests you and works maths out exactly. It runs on your Windows laptop, works offline, and costs US$1, once.">
 <meta name="theme-color" content="#000000">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/img/icon-512.png" type="image/png">
@@ -13,7 +13,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="MrSOLIS">
 <meta property="og:url" content="https://aduamankwahkwasi292-wq.github.io/lunar-app/">
-<meta property="og:title" content="MrSOLIS 3 — Your study tutor, on your own computer">
+<meta property="og:title" content="MrSOLIS 3 · Your lecture slides, taught to you">
 <meta property="og:description" content="Lessons from your own slides, quizzes it marks, maths worked out exactly. Offline, private, US$1 once.">
 <meta property="og:image" content="https://aduamankwahkwasi292-wq.github.io/lunar-app/assets/img/og.jpg">
 <meta property="og:image:width" content="1200">
@@ -37,461 +37,161 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<canvas id="stars" aria-hidden="true"></canvas>
 
 <header class="nav" id="nav">
   <div class="wrap nav-in">
     <a class="brand" href="#top" aria-label="MrSOLIS 3, back to top">
-      <svg viewBox="0 0 44 36" aria-hidden="true"><defs><linearGradient id="lm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".55" stop-color="#bfc2c6"/><stop offset="1" stop-color="#7c8086"/></linearGradient></defs><path d="M4 32V6l14 14L32 6v26" fill="none" stroke="url(#lm)" stroke-width="5"/><circle cx="39" cy="29.5" r="3" fill="#fff"/></svg>
+      <svg viewBox="0 0 44 36" aria-hidden="true"><path d="M4 32V6l14 14L32 6v26" fill="none" stroke="currentColor" stroke-width="5"/><circle cx="39" cy="29.5" r="3" fill="currentColor"/></svg>
       MrSOLIS <span>3</span>
     </a>
     <nav class="nav-links" aria-label="Main">
-      <a href="#features">Features</a>
-      <a href="#tour">App tour</a>
+      <a href="#story">How it works</a>
       <a href="#watch">Watch</a>
       <a href="#price">Price</a>
-      <a href="#install">Install</a>
-      <a href="#faq">FAQ</a>
-      <a class="btn btn-primary btn-sm" href="#price">Get MrSOLIS</a>
+      <a href="#help">Help</a>
+      <a class="btn btn-primary btn-sm" href="https://github.com/aduamankwahkwasi292-wq/lunar/releases/latest" data-dl>Download</a>
     </nav>
   </div>
 </header>
 
 <main id="main">
-  <!-- ═══ hero ═══ -->
   <section class="hero" id="top">
     <div class="wrap">
-      <a class="pill" href="#price"><b>NEW</b>MrSOLIS 3 for Windows · US$1, once</a>
-      <h1>Your study tutor,<br><span class="metal">on your own computer.</span></h1>
-      <p class="lead">Drop in your lecture slides and MrSOLIS teaches them to you, one slide at a time. Ask it anything, snap a
-        question from your notebook, take quizzes it marks for you, and practise maths with every answer worked out exactly.
-        It runs on your laptop, works offline, and costs US$1 — once.</p>
+      <h1>Your lecture slides,<br>taught to you.</h1>
+      <p class="lead">Drop in a deck the night before an exam. MrSOLIS goes through it with you, one slide at a time, on your own laptop. No internet needed.</p>
       <div class="cta-row">
         <a class="btn btn-primary btn-lg" href="https://github.com/aduamankwahkwasi292-wq/lunar/releases/latest" data-dl>
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.6 10.5 4.5v7H3zM11.6 4.35 21 3v8.5h-9.4zM3 12.5h7.5v7L3 18.4zM11.6 12.5H21V21l-9.4-1.4z"/></svg>
           Download for Windows
         </a>
-        <a class="btn btn-lg" href="#watch">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z"/></svg>
-          Watch it work
-        </a>
+        <a class="btn btn-ghost btn-lg" href="#watch">Watch it work</a>
       </div>
-      <p class="cta-note">Windows 10 or 11 · <b>US$1 (GHS 12)</b>, paid once · Updates are free · macOS and Linux coming soon</p>
-      <div class="hero-shot reveal">
-        <div class="frame"><img src="assets/img/shot-diagram.webp" width="1600" height="850" alt="MrSOLIS teaching Ohm's law: the slide with its circuit diagram on the silver board, and the lesson written underneath" fetchpriority="high"></div>
-      </div>
-      <div class="strip reveal">
-        <div><b>Works offline</b><span>After a one-time setup, no internet needed to study.</span></div>
-        <div><b>Private</b><span>Your slides and questions never leave your computer.</span></div>
-        <div><b>Pay once</b><span>US$1. Every update after that is free.</span></div>
-        <div><b>Any course</b><span>Lessons from your own material, at your level.</span></div>
-      </div>
+      <p class="cta-note">US$1, once · Windows 10 and 11</p>
+    </div>
+    <div class="wrap wide">
+      <button type="button" class="shot hero-shot" data-full="assets/img/shot-diagram.webp" data-caption="A physics lesson: the slide, circuit diagram and all, with MrSOLIS's explanation underneath.">
+        <img src="assets/img/shot-diagram.webp" width="1600" height="850" alt="MrSOLIS teaching a slide on Ohm's law, with its circuit diagram on the board and the lesson underneath" fetchpriority="high">
+      </button>
     </div>
   </section>
 
-  <!-- ═══ features ═══ -->
-  <section id="features">
+  <section class="story" id="story" aria-label="How it works">
     <div class="wrap">
-      <div class="sec-head reveal">
-        <div class="eyebrow">What it does</div>
-        <h2>Everything you need to study, in one window.</h2>
-        <p>MrSOLIS is a tutor, a quiz master and a maths engine that lives on your laptop. Here's how it helps.</p>
-      </div>
+      <article class="chapter reveal">
+        <div class="chapter-text">
+          <h2>It teaches each slide.</h2>
+          <p>Your slide goes up on the board, diagrams and all, and MrSOLIS explains it underneath in plain words. PDF, PowerPoint, Word or a photo of your notes.</p>
+        </div>
+        <button type="button" class="shot" data-full="assets/img/shot-cell.webp" data-caption="A biology lesson: the slide's cell diagram above, MrSOLIS's explanation below.">
+          <img src="assets/img/shot-cell.webp" width="1600" height="850" loading="lazy" alt="MrSOLIS explaining a slide about the parts of an animal cell">
+        </button>
+      </article>
 
-      <div class="feature reveal">
-        <div class="feature-text">
-          <span class="badge">Lessons</span>
-          <h3>It teaches your slides — the way a good tutor would.</h3>
-          <p>Drop a PDF, PowerPoint, Word file or a photo of your notes on the board. Each slide appears on a silver board, and
-            MrSOLIS explains it underneath in plain words, at the length you choose.</p>
-          <ul class="ticks">
-            <li>Looks at the diagrams, charts and pictures on your slides</li>
-            <li>Short, standard or detailed lessons</li>
-            <li>Your place is saved in every deck</li>
-          </ul>
+      <article class="chapter flip reveal">
+        <div class="chapter-text">
+          <h2>When something doesn't click, ask.</h2>
+          <p>Ask about the slide you're on, highlight a line you don't get, or snap a question from your notebook. It walks you through it.</p>
         </div>
-        <div class="frame zoom" tabindex="0" role="button" data-full="assets/img/shot-cell.webp" data-caption="A biology lesson: the slide's cell diagram above, MrSOLIS's explanation below."><img src="assets/img/shot-cell.webp" width="1600" height="850" loading="lazy" alt="MrSOLIS explaining a slide about the parts of an animal cell"></div>
-      </div>
+        <button type="button" class="shot" data-full="assets/img/shot-picture.webp" data-caption="A photo of a homework question from a notebook, read and answered part by part.">
+          <img src="assets/img/shot-picture.webp" width="1600" height="850" loading="lazy" alt="A notebook photo of a physics question, and MrSOLIS's answer">
+        </button>
+      </article>
 
-      <div class="feature flip reveal">
-        <div class="feature-text">
-          <span class="badge">Ask &amp; solve</span>
-          <h3>Ask anything. Highlight anything.</h3>
-          <p>Type a question about the slide you're on, or highlight any part of a slide or lesson and press <b>Explain</b> for a
-            closer look or <b>Solve</b> for a worked answer.</p>
-          <ul class="ticks">
-            <li>Answers about your own material, not the whole internet</li>
-            <li>Worked solutions, step by step</li>
-            <li>“Practise more like this” turns a problem into practice</li>
-          </ul>
+      <article class="chapter reveal">
+        <div class="chapter-text">
+          <h2>Then it tests you.</h2>
+          <p>Fresh questions from your slides, marked in your own words. You see what you got right and exactly what you left out.</p>
         </div>
-        <div class="shots-2">
-          <div class="frame zoom" tabindex="0" role="button" data-full="assets/img/shot-ask.webp" data-caption="Asking a question about the slide you're on."><img src="assets/img/shot-ask.webp" width="1600" height="850" loading="lazy" alt="A student's question about Ohm's law and MrSOLIS's answer"></div>
-        </div>
-      </div>
+        <button type="button" class="shot" data-full="assets/img/shot-score.webp" data-caption="A finished quiz: 3 of 4, with the wrong answer caught and the right one shown, each from its slide.">
+          <img src="assets/img/shot-score.webp" width="1600" height="850" loading="lazy" alt="A quiz score of 3 out of 4, with every question reviewed">
+        </button>
+      </article>
 
-      <div class="feature reveal">
-        <div class="feature-text">
-          <span class="badge">Pictures &amp; videos</span>
-          <h3>Stuck on a question in your notebook? Snap it.</h3>
-          <p>Take a picture of a question — from your notebook, a handout or a past paper — or paste a screenshot, and ask.
-            MrSOLIS reads it and walks you through it.</p>
-          <ul class="ticks">
-            <li>Photos, screenshots and handwriting</li>
-            <li>Lecture videos and recordings: it listens to what's said and looks at what's shown</li>
-          </ul>
+      <article class="chapter flip reveal">
+        <div class="chapter-text">
+          <h2>And the maths adds up.</h2>
+          <p>Our own maths engine works every step out exactly instead of guessing. Bring one question from your notes and it makes a practice set from it, with a calculator beside you.</p>
         </div>
-        <div class="frame zoom" tabindex="0" role="button" data-full="assets/img/shot-picture.webp" data-caption="A photo of a homework question from a notebook, read and answered part by part."><img src="assets/img/shot-picture.webp" width="1600" height="850" loading="lazy" alt="A notebook photo of a physics question about Ohm's law, and MrSOLIS's answer"></div>
-      </div>
-
-      <div class="feature flip reveal">
-        <div class="feature-text">
-          <span class="badge">Quizzes</span>
-          <h3>Quizzes it writes — and marks — for you.</h3>
-          <p>MrSOLIS writes fresh questions from your slides while you answer, marks what you write in your own words against
-            the slides, and tells you exactly what you left out.</p>
-          <ul class="ticks">
-            <li>No question is ever asked twice</li>
-            <li>Fair marking: right, partly right or not yet — with the reason</li>
-            <li>Scores kept in Quizzes and History</li>
-          </ul>
-        </div>
-        <div class="shots-2">
-          <div class="frame zoom" tabindex="0" role="button" data-full="assets/img/shot-score.webp" data-caption="A finished quiz: 3 of 4, with the wrong answer caught and the right one shown, each from its slide."><img src="assets/img/shot-score.webp" width="1600" height="850" loading="lazy" alt="A quiz score of 3 out of 4, with every question reviewed"></div>
-        </div>
-      </div>
-
-      <div class="feature reveal" id="maths">
-        <div class="feature-text">
-          <span class="badge white">Highly recommended for maths</span>
-          <h3>Maths you can trust: worked out, not guessed.</h3>
-          <p>AI tutors guess at numbers. MrSOLIS's own maths engines don't: they work every answer out exactly. Bring one maths
-            question from your notes or a past paper, and <b>SQE</b> makes fresh versions of it with new numbers, marks your answers
-            and shows the working — with a scientific calculator right beside the question.</p>
-          <ul class="ticks">
-            <li>Calculus, algebra, equations, statistics, trigonometry, vectors, matrices and word problems</li>
-            <li><b>/mx</b> commands: exact answers, or a clear reason why not</li>
-            <li>Your own question answered too, with every step</li>
-          </ul>
-        </div>
-        <div class="frame zoom" tabindex="0" role="button" data-full="assets/img/shot-sqe.webp" data-caption="SQE practice: a fresh version of the student's own question, with the calculator docked beside it."><img src="assets/img/shot-sqe.webp" width="1375" height="975" loading="lazy" alt="MrSOLIS 2-AL maths practice with a docked scientific calculator"></div>
-      </div>
-
-      <div class="feature flip reveal">
-        <div class="feature-text">
-          <span class="badge">Organised</span>
-          <h3>Your notes, subjects and progress — in one place.</h3>
-          <p>Save any lesson or answer to <b>Notes</b>, where each deck gets its own crib sheet. Group decks by course in
-            <b>Subjects</b>, reopen any upload, and watch your progress in <b>History</b>.</p>
-          <ul class="ticks">
-            <li>Export your notes as a file</li>
-            <li>“Find anything” jumps to any word or slide number in your lesson</li>
-            <li>Talk to it: the mic types what you say, and Live is a spoken conversation</li>
-          </ul>
-        </div>
-        <div class="frame zoom" tabindex="0" role="button" data-full="assets/img/shot-subjects.webp" data-caption="Subjects: decks grouped by course, with progress."><img src="assets/img/shot-subjects.webp" width="1600" height="850" loading="lazy" alt="The Subjects page with Physics and Biology"></div>
-      </div>
+        <button type="button" class="shot" data-full="assets/img/shot-sqe.webp" data-caption="Maths practice: a fresh version of the student's own question, with the calculator docked beside it.">
+          <img src="assets/img/shot-sqe.webp" width="1375" height="975" loading="lazy" alt="Maths practice in MrSOLIS with a scientific calculator beside the question">
+        </button>
+      </article>
     </div>
   </section>
 
-  <!-- ═══ the app tour ═══ -->
-  <section id="tour">
-    <div class="wrap">
-      <div class="sec-head center reveal" style="text-align:center">
-        <div class="eyebrow">App tour</div>
-        <h2>Every part of MrSOLIS.</h2>
-        <p>Real screenshots from MrSOLIS 3. Tap any of them for a closer look.</p>
+  <section class="promises" aria-label="Why MrSOLIS">
+    <ul class="wrap promise-row reveal">
+      <li><b>Works offline</b><span>Study anywhere, data or not.</span></li>
+      <li><b>Stays on your laptop</b><span>Your slides and questions are never uploaded.</span></li>
+      <li><b>Pay once</b><span>US$1, and every update is free.</span></li>
+    </ul>
+  </section>
+
+  <section class="watch" id="watch">
+    <div class="wrap narrow reveal">
+      <h2>Watch a real study session.</h2>
+      <div class="segmented" role="group" aria-label="Choose a video">
+        <button type="button" aria-pressed="true" data-video="assets/video/tour.mp4" data-poster="assets/img/poster-tour.webp" data-meta="10 minutes · 10.7 MB">The full tour</button>
+        <button type="button" aria-pressed="false" data-video="assets/video/highlight.mp4" data-poster="assets/img/poster-highlight.webp" data-meta="1 minute · 0.9 MB">In one minute</button>
       </div>
-      <div class="tabs reveal" role="tablist" aria-label="Parts of the app">
-        <button class="tab" type="button" role="tab" aria-selected="true" data-filter="all">All</button>
-        <button class="tab" type="button" role="tab" aria-selected="false" data-filter="learn">Lessons</button>
-        <button class="tab" type="button" role="tab" aria-selected="false" data-filter="ask">Ask</button>
-        <button class="tab" type="button" role="tab" aria-selected="false" data-filter="quiz">Quizzes</button>
-        <button class="tab" type="button" role="tab" aria-selected="false" data-filter="maths">Maths</button>
-        <button class="tab" type="button" role="tab" aria-selected="false" data-filter="organise">Organise</button>
-        <button class="tab" type="button" role="tab" aria-selected="false" data-filter="settings">Settings &amp; help</button>
+      <div class="player">
+        <video id="video" controls preload="none" playsinline poster="assets/img/poster-tour.webp" src="assets/video/tour.mp4"></video>
       </div>
-      <div class="gallery" id="gallery">
-        <article class="card reveal" data-part="learn">
-          <button type="button" data-full="assets/img/shot-home.webp" data-caption="The board: Drop your slides here to start a lesson — or just ask anything." aria-label="Enlarge: The board"><img src="assets/img/thumb/shot-home.webp" loading="lazy" alt="The board"></button>
-          <div class="card-body"><b>The board</b><span>Drop your slides here to start a lesson — or just ask anything.</span></div>
-        </article>
-        <article class="card reveal" data-part="learn">
-          <button type="button" data-full="assets/img/shot-diagram.webp" data-caption="It reads diagrams: Each slide sits on the silver board, circuits and charts included, with the lesson underneath." aria-label="Enlarge: It reads diagrams"><img src="assets/img/thumb/shot-diagram.webp" loading="lazy" alt="It reads diagrams"></button>
-          <div class="card-body"><b>It reads diagrams</b><span>Each slide sits on the silver board, circuits and charts included, with the lesson underneath.</span></div>
-        </article>
-        <article class="card reveal" data-part="learn">
-          <button type="button" data-full="assets/img/shot-cell.webp" data-caption="Any subject: Physics, biology, economics: the lessons come from your own material." aria-label="Enlarge: Any subject"><img src="assets/img/thumb/shot-cell.webp" loading="lazy" alt="Any subject"></button>
-          <div class="card-body"><b>Any subject</b><span>Physics, biology, economics: the lessons come from your own material.</span></div>
-        </article>
-        <article class="card reveal" data-part="learn">
-          <button type="button" data-full="assets/img/shot-focus.webp" data-caption="Focus mode: Hide everything but the board when it&#x27;s time to concentrate." aria-label="Enlarge: Focus mode"><img src="assets/img/thumb/shot-focus.webp" loading="lazy" alt="Focus mode"></button>
-          <div class="card-body"><b>Focus mode</b><span>Hide everything but the board when it&#x27;s time to concentrate.</span></div>
-        </article>
-        <article class="card reveal" data-part="learn organise">
-          <button type="button" data-full="assets/img/shot-find.webp" data-caption="Find anything: Type a word or a slide number to jump straight to it in your lesson." aria-label="Enlarge: Find anything"><img src="assets/img/thumb/shot-find.webp" loading="lazy" alt="Find anything"></button>
-          <div class="card-body"><b>Find anything</b><span>Type a word or a slide number to jump straight to it in your lesson.</span></div>
-        </article>
-        <article class="card reveal" data-part="ask">
-          <button type="button" data-full="assets/img/shot-ask.webp" data-caption="Ask about the slide: Questions are answered about the slide you&#x27;re on, from your material." aria-label="Enlarge: Ask about the slide"><img src="assets/img/thumb/shot-ask.webp" loading="lazy" alt="Ask about the slide"></button>
-          <div class="card-body"><b>Ask about the slide</b><span>Questions are answered about the slide you&#x27;re on, from your material.</span></div>
-        </article>
-        <article class="card reveal" data-part="ask">
-          <button type="button" data-full="assets/img/shot-highlight.webp" data-caption="Highlight anything: Select part of a slide or lesson, then Explain for a closer look or Solve for a worked answer." aria-label="Enlarge: Highlight anything"><img src="assets/img/thumb/shot-highlight.webp" loading="lazy" alt="Highlight anything"></button>
-          <div class="card-body"><b>Highlight anything</b><span>Select part of a slide or lesson, then Explain for a closer look or Solve for a worked answer.</span></div>
-        </article>
-        <article class="card reveal" data-part="ask maths">
-          <button type="button" data-full="assets/img/shot-solve.webp" data-caption="Worked solutions: Press Solve on a problem: MrSOLIS writes it as a CUSTOM-Mx command, and the engine works it out exactly." aria-label="Enlarge: Worked solutions"><img src="assets/img/thumb/shot-solve.webp" loading="lazy" alt="Worked solutions"></button>
-          <div class="card-body"><b>Worked solutions</b><span>Press Solve on a problem: MrSOLIS writes it as a CUSTOM-Mx command, and the engine works it out exactly.</span></div>
-        </article>
-        <article class="card reveal" data-part="ask">
-          <button type="button" data-full="assets/img/shot-picture.webp" data-caption="Snap a question: A photo of a question from your notebook or a past paper, read and explained." aria-label="Enlarge: Snap a question"><img src="assets/img/thumb/shot-picture.webp" loading="lazy" alt="Snap a question"></button>
-          <div class="card-body"><b>Snap a question</b><span>A photo of a question from your notebook or a past paper, read and explained.</span></div>
-        </article>
-        <article class="card reveal" data-part="quiz">
-          <button type="button" data-full="assets/img/shot-quizzes.webp" data-caption="Quizzes: Pick a deck and how many questions — or practise maths with SQE." aria-label="Enlarge: Quizzes"><img src="assets/img/thumb/shot-quizzes.webp" loading="lazy" alt="Quizzes"></button>
-          <div class="card-body"><b>Quizzes</b><span>Pick a deck and how many questions — or practise maths with SQE.</span></div>
-        </article>
-        <article class="card reveal" data-part="quiz">
-          <button type="button" data-full="assets/img/shot-quiz.webp" data-caption="Marked in your own words: Answer as you&#x27;d write it; MrSOLIS marks it against the slide and says what&#x27;s missing." aria-label="Enlarge: Marked in your own words"><img src="assets/img/thumb/shot-quiz.webp" loading="lazy" alt="Marked in your own words"></button>
-          <div class="card-body"><b>Marked in your own words</b><span>Answer as you&#x27;d write it; MrSOLIS marks it against the slide and says what&#x27;s missing.</span></div>
-        </article>
-        <article class="card reveal" data-part="quiz">
-          <button type="button" data-full="assets/img/shot-score.webp" data-caption="Your score, with reasons: Every question reviewed with the right answer and the slide it came from." aria-label="Enlarge: Your score, with reasons"><img src="assets/img/thumb/shot-score.webp" loading="lazy" alt="Your score, with reasons"></button>
-          <div class="card-body"><b>Your score, with reasons</b><span>Every question reviewed with the right answer and the slide it came from.</span></div>
-        </article>
-        <article class="card reveal" data-part="maths quiz">
-          <button type="button" data-full="assets/img/shot-sqe-start.webp" data-caption="Bring your own maths question: MrSOLIS 2-AL turns one question into a whole practice set." aria-label="Enlarge: Bring your own maths question"><img src="assets/img/thumb/shot-sqe-start.webp" loading="lazy" alt="Bring your own maths question"></button>
-          <div class="card-body"><b>Bring your own maths question</b><span>MrSOLIS 2-AL turns one question into a whole practice set.</span></div>
-        </article>
-        <article class="card reveal" data-part="maths quiz">
-          <button type="button" data-full="assets/img/shot-sqe.webp" data-caption="Practice, with a calculator: Fresh versions with new numbers, and a scientific calculator docked beside the question." aria-label="Enlarge: Practice, with a calculator"><img src="assets/img/thumb/shot-sqe.webp" loading="lazy" alt="Practice, with a calculator"></button>
-          <div class="card-body"><b>Practice, with a calculator</b><span>Fresh versions with new numbers, and a scientific calculator docked beside the question.</span></div>
-        </article>
-        <article class="card reveal" data-part="maths quiz">
-          <button type="button" data-full="assets/img/shot-sqe-review.webp" data-caption="Every answer, with the working: Your score, your own question answered, and the working for each version." aria-label="Enlarge: Every answer, with the working"><img src="assets/img/thumb/shot-sqe-review.webp" loading="lazy" alt="Every answer, with the working"></button>
-          <div class="card-body"><b>Every answer, with the working</b><span>Your score, your own question answered, and the working for each version.</span></div>
-        </article>
-        <article class="card reveal" data-part="maths">
-          <button type="button" data-full="assets/img/shot-mx.webp" data-caption="Exact maths with /mx: Type /mx and a command: CUSTOM-Mx works it out exactly, or says why it can&#x27;t." aria-label="Enlarge: Exact maths with /mx"><img src="assets/img/thumb/shot-mx.webp" loading="lazy" alt="Exact maths with /mx"></button>
-          <div class="card-body"><b>Exact maths with /mx</b><span>Type /mx and a command: CUSTOM-Mx works it out exactly, or says why it can&#x27;t.</span></div>
-        </article>
-        <article class="card reveal" data-part="maths organise">
-          <button type="button" data-full="assets/img/shot-calc.webp" data-caption="A calculator on the board: Type /calculator for a scientific calculator right beside your lesson." aria-label="Enlarge: A calculator on the board"><img src="assets/img/thumb/shot-calc.webp" loading="lazy" alt="A calculator on the board"></button>
-          <div class="card-body"><b>A calculator on the board</b><span>Type /calculator for a scientific calculator right beside your lesson.</span></div>
-        </article>
-        <article class="card reveal" data-part="organise maths">
-          <button type="button" data-full="assets/img/shot-tools.webp" data-caption="Tools: A scientific calculator, a step-by-step solver, a formula sheet and a study timer." aria-label="Enlarge: Tools"><img src="assets/img/thumb/shot-tools.webp" loading="lazy" alt="Tools"></button>
-          <div class="card-body"><b>Tools</b><span>A scientific calculator, a step-by-step solver, a formula sheet and a study timer.</span></div>
-        </article>
-        <article class="card reveal" data-part="organise">
-          <button type="button" data-full="assets/img/shot-subjects.webp" data-caption="Subjects: Group your decks by course and see how much of each you&#x27;ve studied." aria-label="Enlarge: Subjects"><img src="assets/img/thumb/shot-subjects.webp" loading="lazy" alt="Subjects"></button>
-          <div class="card-body"><b>Subjects</b><span>Group your decks by course and see how much of each you&#x27;ve studied.</span></div>
-        </article>
-        <article class="card reveal" data-part="organise">
-          <button type="button" data-full="assets/img/shot-uploads.webp" data-caption="Uploads: Every deck you&#x27;ve opened, ready to pick up where you left off." aria-label="Enlarge: Uploads"><img src="assets/img/thumb/shot-uploads.webp" loading="lazy" alt="Uploads"></button>
-          <div class="card-body"><b>Uploads</b><span>Every deck you&#x27;ve opened, ready to pick up where you left off.</span></div>
-        </article>
-        <article class="card reveal" data-part="organise">
-          <button type="button" data-full="assets/img/shot-notes.webp" data-caption="Notes: Your own notes beside the lessons and answers you saved, and export to a file." aria-label="Enlarge: Notes"><img src="assets/img/thumb/shot-notes.webp" loading="lazy" alt="Notes"></button>
-          <div class="card-body"><b>Notes</b><span>Your own notes beside the lessons and answers you saved, and export to a file.</span></div>
-        </article>
-        <article class="card reveal" data-part="organise">
-          <button type="button" data-full="assets/img/shot-crib.webp" data-caption="A crib sheet for every deck: Every formula and definition in a deck, quoted exactly as your slides print them." aria-label="Enlarge: A crib sheet for every deck"><img src="assets/img/thumb/shot-crib.webp" loading="lazy" alt="A crib sheet for every deck"></button>
-          <div class="card-body"><b>A crib sheet for every deck</b><span>Every formula and definition in a deck, quoted exactly as your slides print them.</span></div>
-        </article>
-        <article class="card reveal" data-part="organise">
-          <button type="button" data-full="assets/img/shot-history.webp" data-caption="History: Your lessons, quizzes and practice at a glance." aria-label="Enlarge: History"><img src="assets/img/thumb/shot-history.webp" loading="lazy" alt="History"></button>
-          <div class="card-body"><b>History</b><span>Your lessons, quizzes and practice at a glance.</span></div>
-        </article>
-        <article class="card reveal" data-part="settings">
-          <button type="button" data-full="assets/img/shot-brains.webp" data-caption="Choose your brain: Speedy or Smarts: download once, then it works offline." aria-label="Enlarge: Choose your brain"><img src="assets/img/thumb/shot-brains.webp" loading="lazy" alt="Choose your brain"></button>
-          <div class="card-body"><b>Choose your brain</b><span>Speedy or Smarts: download once, then it works offline.</span></div>
-        </article>
-        <article class="card reveal" data-part="settings">
-          <button type="button" data-full="assets/img/shot-settings.webp" data-caption="Make it yours: Lesson length, text size on the board, calmer motion, and how fast MrSOLIS speaks." aria-label="Enlarge: Make it yours"><img src="assets/img/thumb/shot-settings.webp" loading="lazy" alt="Make it yours"></button>
-          <div class="card-body"><b>Make it yours</b><span>Lesson length, text size on the board, calmer motion, and how fast MrSOLIS speaks.</span></div>
-        </article>
-        <article class="card reveal" data-part="settings">
-          <button type="button" data-full="assets/img/shot-help.webp" data-caption="How to use: A short guide to everything, built into the app." aria-label="Enlarge: How to use"><img src="assets/img/thumb/shot-help.webp" loading="lazy" alt="How to use"></button>
-          <div class="card-body"><b>How to use</b><span>A short guide to everything, built into the app.</span></div>
-        </article>
-        <article class="card reveal" data-part="settings">
-          <button type="button" data-full="assets/img/shot-buy.webp" data-caption="Buy inside MrSOLIS: US$1 (GHS 12), paid once by Mobile Money or card. Already have a code? Type it once and you&#x27;re done." aria-label="Enlarge: Buy inside MrSOLIS"><img class="fit" src="assets/img/thumb/shot-buy.webp" loading="lazy" alt="Buy inside MrSOLIS"></button>
-          <div class="card-body"><b>Buy inside MrSOLIS</b><span>US$1 (GHS 12), paid once by Mobile Money or card. Already have a code? Type it once and you&#x27;re done.</span></div>
-        </article>
-        <article class="card reveal" data-part="settings">
-          <button type="button" data-full="assets/img/shot-momo.webp" data-caption="Or Mobile Money to our number: Send GHS 12 with your reference; MrSOLIS activates by itself once we confirm it." aria-label="Enlarge: Or Mobile Money to our number"><img class="fit" src="assets/img/thumb/shot-momo.webp" loading="lazy" alt="Or Mobile Money to our number"></button>
-          <div class="card-body"><b>Or Mobile Money to our number</b><span>Send GHS 12 with your reference; MrSOLIS activates by itself once we confirm it.</span></div>
-        </article>
-      </div>
-      <p class="swipe-hint" aria-hidden="true">Swipe for more →</p>
+      <p class="meta"><span id="video-meta">10 minutes · 10.7 MB</span>. It only downloads when you press play.</p>
     </div>
   </section>
 
-  <!-- ═══ watch ═══ -->
-  <section id="watch">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <div class="eyebrow">Watch</div>
-        <h2>See MrSOLIS at work.</h2>
-        <p>Two screen recordings from MrSOLIS 3. They only download when you press play, to save your data.</p>
-      </div>
-      <div class="videos">
-        <div class="video-card reveal">
-          <div class="frame"><video controls preload="none" playsinline poster="assets/img/poster-highlight.webp" src="assets/video/highlight.mp4"></video></div>
-          <div class="video-meta"><b>Highlight, save, explain</b><span>0:55 · 0.9 MB</span></div>
-          <p>Highlight part of a slide to save it to Notes, or press Explain for a closer look at it.</p>
-        </div>
-        <div class="video-card reveal">
-          <div class="frame"><video controls preload="none" playsinline poster="assets/img/poster-tour.webp" src="assets/video/tour.mp4"></video></div>
-          <div class="video-meta"><b>The full walkthrough</b><span>10:00 · 10.7 MB</span></div>
-          <p>A lesson from slides, Subjects, Notes, a quiz (sped up), maths practice, Tools, Settings and a video, explained.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ engines ═══ -->
-  <section id="engines">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <div class="eyebrow">Made for MrSOLIS</div>
-        <h2>Our own engines under the hood.</h2>
-        <p>Built by Behemoth Group to do what AI models alone can't. They're great, but not perfect — and every update
-          improves them, for free.</p>
-      </div>
-      <div class="engines">
-        <div class="engine reveal"><span class="badge">Maths</span><h3>CUSTOM-Mx</h3><p>Works calculations out exactly instead of
-          letting the brain guess. A word problem becomes a command you can check before it runs.</p></div>
-        <div class="engine reveal"><span class="badge">Practice</span><h3>CUSTOM-SQE</h3><p>Turns one maths question into a fresh
-          practice set with new numbers, in your own words, with clean answers — each checked a second way.</p></div>
-        <div class="engine reveal"><span class="badge">Memory</span><h3>CUSTOM-Kx</h3><p>Keeps the brain light on your laptop's memory:
-          about 45% less after a long study session, so older laptops keep up.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ price ═══ -->
-  <section id="price">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <div class="eyebrow">Price</div>
-        <h2>One price. Yours to keep.</h2>
-        <p>No subscription and no account. Pay once inside MrSOLIS, by Mobile Money or card, from Ghana or abroad.</p>
-      </div>
-      <div class="price-wrap">
-        <div class="price-card reveal">
-          <div class="eyebrow">MrSOLIS 3 · licence for one computer</div>
-          <div class="price"><b>US$1</b><span>GHS 12, paid once</span></div>
-          <p class="sub">Everything in MrSOLIS, for as long as you like.</p>
-          <ul class="ticks">
-            <li>Every feature — lessons, quizzes, maths engines, voice and tools</li>
-            <li>All updates free, new brains included</li>
-            <li>Works offline after activation</li>
-            <li>Refund within 24 hours if it won't run on your computer</li>
-          </ul>
-          <a class="btn btn-primary btn-lg" href="https://github.com/aduamankwahkwasi292-wq/lunar/releases/latest" data-dl>Download MrSOLIS</a>
-        </div>
-        <div class="reveal">
-          <ol class="steps">
-            <li><b>Install MrSOLIS</b><p>Download it and run the installer (see <a href="#install">Install</a>).</p></li>
-            <li><b>Press “Buy MrSOLIS”</b><p>On the activation screen. Type your email: your receipt goes there.</p></li>
-            <li><b>Pay GHS 12 on Paystack's secure page</b><p>It opens in your browser. Pay with Mobile Money (you approve it
-              on your phone) or any card, from Ghana or abroad.</p></li>
-            <li><b>MrSOLIS activates by itself</b><p>Within seconds of paying. Nobody has to type a code.</p></li>
-          </ol>
-          <p class="pay-alt">Prefer to send Mobile Money straight to our number? Choose that option in MrSOLIS instead
-            (<b>020 483 2725</b> · Telecel Cash · Janet Nartey). We confirm those by hand, usually within a few hours.</p>
-        </div>
-      </div>
-      <figure class="buy-flow reveal">
-        <div class="frame zoom" tabindex="0" role="button" data-full="assets/img/buy-flow.webp" data-caption="Inside MrSOLIS: type your licence code, or buy one by Mobile Money or card."><img src="assets/img/buy-flow.webp" width="1600" height="648" loading="lazy" alt="Three MrSOLIS screens: Activate, Buy MrSOLIS for US$1, and the Mobile Money payment details"></div>
-        <figcaption class="caption">Activate with a code, or buy one right inside MrSOLIS and pay by Mobile Money or card.</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- ═══ install ═══ -->
-  <section id="install">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <div class="eyebrow">Install</div>
-        <h2>Up and running in a few minutes.</h2>
-      </div>
-      <div class="install">
-        <div class="reveal">
-          <ol class="steps">
-            <li><b>Download and open the installer</b><p>It's one file for Windows 10 and 11.</p></li>
-            <li><b>“Windows protected your PC”?</b><p>Click <span class="path">More info</span>, then <span class="path">Run anyway</span>.
-              Windows shows this for apps that aren't signed by Microsoft yet, like MrSOLIS.</p></li>
-            <li><b>Blocked by Smart App Control?</b><p>Some Windows 11 PCs block apps that aren't signed. Open
-              <span class="path">Windows Security</span> → <span class="path">App &amp; browser control</span> →
-              <span class="path">Smart App Control settings</span>, choose <span class="path">Off</span>, then open the installer again.</p></li>
-            <li><b>Choose a brain</b><p>The first time MrSOLIS opens, pick <b>Speedy</b> (0.73 GB) or <b>Smarts</b> (1.95 GB).
-              It downloads once and then works offline.</p></li>
-            <li><b>Activate</b><p>Type your licence code, or buy one inside MrSOLIS for US$1.</p></li>
-          </ol>
-        </div>
-        <div class="reveal">
-          <div class="note">
-            <b>Before you turn Smart App Control off</b>
-            <p>It's one of Windows' protections, so only turn it off if you're comfortable doing so. Since Windows' April 2026
-              update it can be switched back on in the same place — but Microsoft says its October 2026 update (KB5127648)
-              stops that switch working on some PCs until a fix arrives.</p>
-          </div>
-          <h3 style="margin:30px 0 14px">What you need</h3>
-          <dl class="req">
-            <div><dt>System</dt><dd>Windows 10 or 11, 64-bit (macOS and Linux coming soon)</dd></div>
-            <div><dt>Memory</dt><dd>4 GB of RAM (8 GB for Smarts)</dd></div>
-            <div><dt>Disk</dt><dd>About 3 GB free</dd></div>
-            <div><dt>Internet</dt><dd>Once to activate and download a brain; then a quick licence check when you're online</dd></div>
-          </dl>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ FAQ ═══ -->
-  <section id="faq">
-    <div class="wrap">
-      <div class="sec-head center reveal" style="text-align:center">
-        <div class="eyebrow">FAQ</div>
-        <h2>Questions, answered.</h2>
-      </div>
-      <div class="faq reveal">
-        <details><summary>Does MrSOLIS need the internet?</summary><p>Only to activate your licence once, download a brain once,
-          and check your licence briefly once a day when you're online. Lessons, chat, quizzes and maths all run on your computer.</p></details>
-        <details><summary>Is my material private?</summary><p>Yes. Your slides, notes, photos and questions are read on your
-          computer and never uploaded. MrSOLIS has no account, no adverts and no tracking.</p></details>
-        <details><summary>What can I study with it?</summary><p>Any course with slides or notes: PDF, PowerPoint and Word files,
-          photos of notes, and lecture videos. Maths and science get extra help from the maths engines.</p></details>
-        <details><summary>Is it good at maths?</summary><p>For maths, use SQE and /mx — they work every answer out exactly. Like
-          every AI, the brains can slip on numbers, so we highly recommend SQE for maths practice. Check important answers
-          against your notes either way.</p></details>
-        <details><summary>Which brain should I choose?</summary><p><b>Speedy</b> is the fastest and lightest — best for older
-          laptops or 4–8 GB of RAM. <b>Smarts</b> gives the best answers on 8 GB laptops and up. You can switch any time in Settings.</p></details>
-        <details><summary>Can I use one licence on two computers?</summary><p>No — each licence is for one computer, the one you
-          activate it on.</p></details>
-        <details><summary>What if it won't run on my computer?</summary><p>Email us within 24 hours of buying, with your proof
-          of payment and a screen recording of the problem, and we'll refund you. See the Terms of use, section 7.</p></details>
-        <details><summary>Are updates free?</summary><p>Yes — every update, including new and improved brains. MrSOLIS tells
-          you its size and asks before downloading one.</p></details>
-        <details><summary>Why does Windows warn me about the installer?</summary><p>MrSOLIS isn't signed by Microsoft yet, so
-          Windows treats it as an unknown app. See the Install steps above.</p></details>
-      </div>
-    </div>
-  </section>
-
-  <section class="final">
-    <div class="wrap reveal">
-      <h2>Start studying smarter today.</h2>
-      <p class="lead">Your slides, your pace, your laptop. US$1, once.</p>
+  <section class="price" id="price">
+    <div class="wrap narrow center reveal">
+      <h2>US$1. Yours to keep.</h2>
+      <p class="lead">No subscription and no account. Buy it inside MrSOLIS with Mobile Money or a card, from Ghana or abroad, and it unlocks in seconds.</p>
       <div class="cta-row">
         <a class="btn btn-primary btn-lg" href="https://github.com/aduamankwahkwasi292-wq/lunar/releases/latest" data-dl>
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.6 10.5 4.5v7H3zM11.6 4.35 21 3v8.5h-9.4zM3 12.5h7.5v7L3 18.4zM11.6 12.5H21V21l-9.4-1.4z"/></svg>
           Download for Windows
         </a>
+      </div>
+      <p class="cta-note">GHS 12 · One computer per licence · macOS and Linux coming soon</p>
+    </div>
+  </section>
+
+  <section class="help" id="help">
+    <div class="wrap narrow reveal">
+      <h2>Good to know</h2>
+      <div class="faq">
+        <details>
+          <summary>What does my computer need?</summary>
+          <p>Windows 10 or 11 (64-bit), 4 GB of memory (8 GB for the Smarts brain) and about 3 GB of free space.</p>
+        </details>
+        <details>
+          <summary>Windows or Edge warned me about the download</summary>
+          <p>MrSOLIS isn't signed by Microsoft yet, so Windows treats it as unknown. In Edge, open the download's <b>⋯</b> menu, choose <b>Keep</b>, then <b>Show more → Keep anyway</b>. If Windows says it protected your PC, click <b>More info</b>, then <b>Run anyway</b>.</p>
+        </details>
+        <details>
+          <summary>Smart App Control blocked the installer</summary>
+          <p>Some Windows 11 PCs block apps that aren't signed. Open <b>Windows Security → App &amp; browser control → Smart App Control settings</b>, choose <b>Off</b>, then run the installer again.</p>
+          <p>It's one of Windows' protections, so only turn it off if you're comfortable doing so. Since Windows' April 2026 update it can be switched back on in the same place, but Microsoft says its October 2026 update (KB5127648) stops that switch working on some PCs until a fix arrives.</p>
+        </details>
+        <details>
+          <summary>Does it need the internet?</summary>
+          <p>Only to activate once and download a brain once (Speedy is 0.73 GB, Smarts 1.95 GB). After that it checks your licence briefly when you're online. Lessons, questions, quizzes and maths all run on your laptop.</p>
+        </details>
+        <details>
+          <summary>Speedy or Smarts?</summary>
+          <p>Speedy is faster and lighter, best for older laptops with 4 to 8 GB of memory. Smarts gives better answers on 8 GB and up. You can switch any time in Settings.</p>
+        </details>
+        <details>
+          <summary>Can I trust its maths?</summary>
+          <p>Practice (SQE) and /mx commands are worked out exactly by our own engine. Like any AI, the brains can slip on numbers in a normal chat, so check important answers against your notes.</p>
+        </details>
+        <details>
+          <summary>Can I pay Mobile Money to your number?</summary>
+          <p>Yes. Choose that option in MrSOLIS and send GHS 12 to <b>020 483 2725</b> (Telecel Cash, Janet Nartey) with your reference. We confirm it by hand, usually within a few hours, and MrSOLIS unlocks by itself.</p>
+        </details>
+        <details>
+          <summary>What if it won't run on my computer?</summary>
+          <p>Email us within 24 hours of buying with your proof of payment and a screen recording of the problem, and we'll refund you. See section 7 of the <a href="terms.html">Terms of use</a>.</p>
+        </details>
       </div>
     </div>
   </section>
@@ -505,7 +205,6 @@
         <a href="terms.html">Terms of use</a>
         <a href="privacy.html">Privacy</a>
         <a href="mailto:jonsonwhocancreate@gmail.com">Contact</a>
-        <a href="#faq">FAQ</a>
       </nav>
     </div>
     <p class="fine">CUSTOM-Mx, CUSTOM-SQE and CUSTOM-Kx, and their names, belong to Behemoth Group. MrSOLIS is built with open
