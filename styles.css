@@ -90,6 +90,22 @@ p { margin: 0; text-wrap: pretty; }
 .shot:hover { border-color: rgba(255, 255, 255, 0.32); }
 .shot img { width: 100%; height: auto; }
 
+/* ── why: cut off the night before an exam, and MrSOLIS isn't ── */
+.cutoff { padding: 150px 0 0; }
+.cutoff h2 { font-size: clamp(32px, 3.6vw, 46px); text-align: center; margin-bottom: 48px; }
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.cutoff figure { margin: 0; }
+.cutoff img { width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--line); }
+.cutoff figcaption { margin-top: 16px; font-size: 20px; font-weight: 600; letter-spacing: -0.01em; }
+.cutoff .payoff { margin-top: 24px; }
+.payoff figcaption { color: var(--dim); font-size: 18px; font-weight: 400; letter-spacing: 0; max-width: 640px; margin-top: 22px; }
+.payoff figcaption b { display: block; color: var(--ink); font-size: clamp(30px, 3.4vw, 44px); font-weight: 650; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 10px; }
+@media (max-width: 760px) {
+  .cutoff { padding-top: 110px; }
+  .pair { grid-template-columns: 1fr; gap: 36px; }
+  .cutoff .payoff { margin-top: 36px; }
+}
+
 /* ── the story ── */
 .story { padding: 150px 0 40px; }
 .chapter { display: grid; grid-template-columns: 5fr 7fr; gap: 72px; align-items: center; margin-bottom: 150px; }
