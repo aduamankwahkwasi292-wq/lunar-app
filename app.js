@@ -64,6 +64,14 @@
     });
   }
 
+  /* on an Android phone the menu's Download button gets the phone app, not the Windows installer */
+  const navDl = $('.nav-links [data-dl]');
+  const apk = $('[data-apk]');
+  if (navDl && apk && /Android/i.test(navigator.userAgent)) {
+    navDl.removeAttribute('data-dl');
+    navDl.href = apk.href;
+  }
+
   /* keep the download buttons on the newest MrSOLIS release (the HTML's link works without this) */
   const REPO = 'aduamankwahkwasi292-wq/lunar';
   fetch(`https://api.github.com/repos/${REPO}/releases/latest`, { headers: { Accept: 'application/vnd.github+json' } })
